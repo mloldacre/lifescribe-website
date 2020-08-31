@@ -1,0 +1,8 @@
+footer {
+  display: flex;
+  background-color: rgb(32, 115, 240);
+  margin-bottom: 20px;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+}
