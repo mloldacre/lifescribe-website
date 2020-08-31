@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
+import Contact from './Contact/Contact';
+import About from './About/About';
 
 
 ReactDOM.render(
   <React.StrictMode>
-  <BrowserRouter>
-    <App/>
+    <BrowserRouter>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
