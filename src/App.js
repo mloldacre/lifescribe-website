@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import Profile from './Profile/Profile';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      Hello world
-    </div>
+    <main className="App">
+      Hello world 2
+      <Profile />
+    </main>
   );
 }
-export default App;

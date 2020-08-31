@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import NewSignup from './NewSignup';
 
-describe('App Component', () => {
+describe('New Signup Component', () => {
   //smoke test
-  it('renders App component without errors', () => {
+  it('renders New Signup component without errors', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<NewSignup />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Contact from './Contact';
 
-describe('App Component', () => {
+describe('Contact Component', () => {
   //smoke test
-  it('renders App component without errors', () => {
+  it('renders Contact component without errors', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<Contact />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

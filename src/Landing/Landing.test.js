@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Landing from './Landing';
 
-describe('App Component', () => {
+describe('Landing Component', () => {
   //smoke test
-  it('renders App component without errors', () => {
+  it('renders Landing component without errors', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<Landing />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });
