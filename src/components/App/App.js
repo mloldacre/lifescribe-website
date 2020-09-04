@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import Landing from './Landing/Landing'
-import LoginSignup from './LoginSignup/LoginSignup'
-import Demo from './Demo/Demo'
-import NotFound from './NotFound/NotFound'
-import Contact from './Contact/Contact';
-import About from './About/About';
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import Landing from '../Landing/Landing'
+import LoginSignup from '../LoginSignup/LoginSignup'
+import Demo from '../Demo/Demo'
+import NotFound from '../NotFound/NotFound'
+import Contact from '../Contact/Contact';
+import About from '../About/About';
 import './App.css';
 
 
