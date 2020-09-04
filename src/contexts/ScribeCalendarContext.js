@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 
 const ScribeCalendarContext = React.createContext({
-  scribeList: [],
+  scribes: [],
   error: null,
   setError: () => { },
   clearError: () => { },
-  setScribeList: () => { },
+  setScribes: () => { },
 })
 export default ScribeCalendarContext
 
-export class ScribeListProvider extends Component {
+export class ScribesProvider extends Component {
   state = {
-    scribeList: [],
+    scribes: [],
     error: null,
   };
 
-  setScribeList = scribeList => {
-    this.setState({ scribeList })
+  setScribes = scribes => {
+    this.setState({ scribes })
   }
 
   setError = error => {
@@ -30,11 +30,11 @@ export class ScribeListProvider extends Component {
 
   render() {
     const value = {
-      scribeList: this.state.scribeList,
+      scribes: this.state.scribes,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setscribeList: this.setscribeList,
+      setScribes: this.setScribes,
     }
     return (
       <ScribeCalendarContext.Provider value={value}>

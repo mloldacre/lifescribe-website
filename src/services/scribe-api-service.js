@@ -3,7 +3,7 @@ import config from '../config'
 
 const ScribeApiService = {
   getScribes() {
-    return fetch(`${config.API_ENDPOINT}/Scribes`, {
+    return fetch(`${config.API_ENDPOINT}/scribes`, {
       headers: {
       },
     })
@@ -14,7 +14,7 @@ const ScribeApiService = {
       )
   },
   getScribe(scribeId) {
-    return fetch(`${config.API_ENDPOINT}/Scribes/${scribeId}`, {
+    return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },

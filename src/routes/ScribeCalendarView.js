@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ScribeApiService from '../services/scribe-api-service';
 import ScribeCalendarContext from '../contexts/ScribeCalendarContext';
+import { Section } from '../components/Utils/Utils'
 import Calendar from '../components/Calendar/Calendar'
 
 
@@ -10,13 +11,13 @@ export default class ScribeCalendarView extends Component {
   componentDidMount() {
     this.context.clearError()
     ScribeApiService.getScribes()
-      .then(this.context.setScribeList)
+      .then(this.context.setScribes)
       .catch(this.context.setError)
   }
   
   renderScribes() {
-    const { scribeList = [] } = this.context
-    return scribeList.map(scribe =>
+    const { scribes = [] } = this.context
+    return scribes.map(scribe =>
       <Calendar
         key={scribe.id}
         scribe={scribe}
@@ -27,11 +28,11 @@ export default class ScribeCalendarView extends Component {
   render() {
     const { error } = this.context
     return (
-      <ul list className='ArticleListPage'>
+      <Section list className='ScribeCalendarView'>
         {error
           ? <p className='error'>There was an error, try again</p>
           : this.renderScribes()}
-      </ul>
+      </Section>
     )
   }
   
