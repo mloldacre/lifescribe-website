@@ -9,7 +9,7 @@ const ScribeCalendarContext = React.createContext({
 })
 export default ScribeCalendarContext
 
-export class ScribesProvider extends Component {
+export class ScribesCalendarProvider extends Component {
   state = {
     scribes: [],
     error: null,

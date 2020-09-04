@@ -16,7 +16,7 @@ const ScribeApiService = {
   getScribe(scribeId) {
     return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}`, {
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>

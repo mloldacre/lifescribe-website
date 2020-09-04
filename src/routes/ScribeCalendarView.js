@@ -29,6 +29,7 @@ export default class ScribeCalendarView extends Component {
     const { error } = this.context
     return (
       <Section list className='ScribeCalendarView'>
+      <h3>Scribe Calendar View</h3>
         {error
           ? <p className='error'>There was an error, try again</p>
           : this.renderScribes()}
