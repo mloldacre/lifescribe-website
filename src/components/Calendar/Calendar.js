@@ -1,10 +1,10 @@
 import React from 'react';
 import './Calendar.css';
 
-export default function Calendar() {
+export default function Calendar(props) {
   return (
-    <div className="Calendar">
-      Calendar Page
-    </div>
+    <li className="Calendar">
+      {props.scribe.date_created}
+    </li>
   );
 }

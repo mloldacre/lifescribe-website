@@ -8,6 +8,7 @@ import Demo from '../Demo/Demo'
 import NotFound from '../NotFound/NotFound'
 import Contact from '../Contact/Contact';
 import About from '../About/About';
+import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import './App.css';
 
 
@@ -24,6 +25,7 @@ export default class App extends React.Component {
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={About} />
           <Route path='/demo' component={Demo} />
+          <Route path='/scribesCalendar' component={ScribeCalendarView}/>
           <Route component={NotFound} />
         </Switch>
 
