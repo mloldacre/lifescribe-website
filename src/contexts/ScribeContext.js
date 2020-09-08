@@ -4,7 +4,7 @@ export const nullScribe = {
   user_id: {}
 }
 
-const ScribeReviewContext = React.createContext({
+const ScribeContext = React.createContext({
   scribe: nullScribe,
   scribbles: [],
   error: null,
@@ -16,9 +16,9 @@ const ScribeReviewContext = React.createContext({
   addScribble: () => { },
 })
 
-export default ScribeReviewContext
+export default ScribeContext
 
-export class ScribeReviewProvider extends Component {
+export class ScribeProvider extends Component {
   state = {
     scribe: nullScribe,
     error: null,
@@ -43,12 +43,12 @@ export class ScribeReviewProvider extends Component {
 
   clearScribe = () => {
     this.setScribe(nullScribe)
-    this.setScribble([])
+    this.setScribbles([])
   }
 
   addScribble = scribble => {
-    this.setScribble([
-      ...this.state.scribble,
+    this.setScribbles([
+      ...this.state.scribbles,
       scribble
     ])
   }
@@ -66,9 +66,9 @@ export class ScribeReviewProvider extends Component {
       addScribble: this.addScribble,
     }
     return (
-      <ScribeReviewContext.Provider value={value}>
+      <ScribeContext.Provider value={value}>
         {this.props.children}
-      </ScribeReviewContext.Provider>
+      </ScribeContext.Provider>
     )
   }
 }

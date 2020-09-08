@@ -53,7 +53,30 @@ const ScribeApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
+  },
+  
+  
+  //TODO Modify to get media scribbles too!
+  postScribble(scribeId, text) {
+    return fetch(`${config.API_ENDPOINT}/scribbles`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        //'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        scribe_id: scribeId,
+        scribble_type: 0,
+        scribble_content: text
+      }),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
   }
+  
 }
 
 export default ScribeApiService

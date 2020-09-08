@@ -4,7 +4,7 @@ import './index.css';
 import App from './components/App/App';
 import { BrowserRouter } from "react-router-dom";
 import { ScribesCalendarProvider } from './contexts/ScribeCalendarContext';
-import { ScribeReviewProvider } from './contexts/ScribeReviewContext';
+import { ScribeProvider } from './contexts/ScribeContext';
 
 
 
@@ -14,9 +14,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScribesCalendarProvider>
-        <ScribeReviewProvider>
+        <ScribeProvider>
           <App />
-        </ScribeReviewProvider>
+        </ScribeProvider>
       </ScribesCalendarProvider>
     </BrowserRouter>
   </React.StrictMode>,

@@ -10,6 +10,7 @@ import Contact from '../Contact/Contact';
 import About from '../About/About';
 import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import ScribeReviewView from '../../routes/ScribeReviewView';
+import CurrentScribeEntry from '../CurrentScribeEntry/CurrentScribeEntry';
 import './App.css';
 
 
@@ -28,6 +29,7 @@ export default class App extends React.Component {
           <Route path='/demo' component={Demo} />
           <Route path='/scribesCalendar' component={ScribeCalendarView}/>
           <Route path='/scribeReview/:scribeId' component={ScribeReviewView}/>
+          <Route path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />
         </Switch>
 
