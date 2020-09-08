@@ -32,7 +32,7 @@ export default class App extends React.Component {
           <PublicRoute path='/about' component={About} />
           <PublicRoute path='/demo' component={Demo} />
           <PrivateRoute path='/loggedIn' component={ActiveUserView}/>
-          <PrivateRoute path='/scribeCalendar' component={ScribeCalendarView}/>
+          <PrivateRoute path='/scribesCalendar' component={ScribeCalendarView}/>
           <PrivateRoute path='/scribeReview/:scribeId' component={ScribeReviewView}/>
           <PrivateRoute path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />
