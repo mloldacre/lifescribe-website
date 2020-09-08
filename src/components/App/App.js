@@ -10,6 +10,8 @@ import Demo from '../Demo/Demo'
 import NotFound from '../NotFound/NotFound'
 import Contact from '../Contact/Contact';
 import About from '../About/About';
+import ActiveUserView from '../../routes/ActiveUserView'
+import Login from '../../routes/Login'
 import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import ScribeReviewView from '../../routes/ScribeReviewView';
 import CurrentScribeEntry from '../CurrentScribeEntry/CurrentScribeEntry';
@@ -25,11 +27,12 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path='/' component={Landing} />
-          <PublicRoute path='/loginSignup' component={LoginSignup} />
+          <PublicRoute path='/loginSignup' component={Login} />
           <PublicRoute path='/contact' component={Contact} />
           <PublicRoute path='/about' component={About} />
           <PublicRoute path='/demo' component={Demo} />
-          <PrivateRoute path='/scribesCalendar' component={ScribeCalendarView}/>
+          <PrivateRoute path='/loggedIn' component={ActiveUserView}/>
+          <PrivateRoute path='/scribeCalendar' component={ScribeCalendarView}/>
           <PrivateRoute path='/scribeReview/:scribeId' component={ScribeReviewView}/>
           <PrivateRoute path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />
