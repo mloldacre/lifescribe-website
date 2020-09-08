@@ -12,7 +12,7 @@ const ScribeReviewContext = React.createContext({
   clearError: () => { },
   setScribe: () => { },
   clearScribe: () => { },
-  setScribble: () => { },
+  setScribbles: () => { },
   addScribble: () => { },
 })
 
@@ -37,8 +37,8 @@ export class ScribeReviewProvider extends Component {
     this.setState({ scribe })
   }
 
-  setScribble = scribble => {
-    this.setState({ scribble })
+  setScribbles = scribbles => {
+    this.setState({ scribbles })
   }
 
   clearScribe = () => {
@@ -56,12 +56,12 @@ export class ScribeReviewProvider extends Component {
   render() {
     const value = {
       scribe: this.state.scribe,
-      scribble: this.state.scribble,
+      scribbles: this.state.scribbles,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setScribe: this.setScribe,
-      setScribble: this.setScribble,
+      setScribbles: this.setScribbles,
       clearScribe: this.clearScribe,
       addScribble: this.addScribble,
     }
