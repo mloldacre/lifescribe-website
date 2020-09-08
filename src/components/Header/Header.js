@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import LoginSignup from '../LoginSignup/LoginSignup';
-import Demo from '../Demo/Demo';
 
 export default function Header() {
   return (
@@ -12,10 +10,10 @@ export default function Header() {
       </Link>
 
       <Link to='/loginSignup'>
-        <LoginSignup />
+        Login/Signup
       </Link>
       <Link to='/demo'>
-        <Demo />
+        Demo
       </Link>
     </header>
   );

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicRoute from '../Utils/PublicRoute';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Landing from '../Landing/Landing'
@@ -23,13 +25,13 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route path='/loginSignup' component={LoginSignup} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/about' component={About} />
-          <Route path='/demo' component={Demo} />
-          <Route path='/scribesCalendar' component={ScribeCalendarView}/>
-          <Route path='/scribeReview/:scribeId' component={ScribeReviewView}/>
-          <Route path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
+          <PublicRoute path='/loginSignup' component={LoginSignup} />
+          <PublicRoute path='/contact' component={Contact} />
+          <PublicRoute path='/about' component={About} />
+          <PublicRoute path='/demo' component={Demo} />
+          <PrivateRoute path='/scribesCalendar' component={ScribeCalendarView}/>
+          <PrivateRoute path='/scribeReview/:scribeId' component={ScribeReviewView}/>
+          <PrivateRoute path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />
         </Switch>
 
