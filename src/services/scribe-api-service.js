@@ -13,8 +13,21 @@ const ScribeApiService = {
           : res.json()
       )
   },
+  getScribeById(scribeId) {
+    return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}`, {
+      headers: {
+        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+  
   getScribesByUserId(userId) {
-    return fetch(`${config.API_ENDPOINT}/scribes/${userId}`, {
+    return fetch(`${config.API_ENDPOINT}/scribes/u/${userId}`, {
       headers: {
         // 'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -57,7 +70,7 @@ const ScribeApiService = {
   
   
   //TODO Modify to get media scribbles too!
-  postScribble(scribeId, text) {
+  postScribble(userId, scribeId, text) {
     return fetch(`${config.API_ENDPOINT}/scribbles`, {
       method: 'POST',
       headers: {
@@ -67,7 +80,8 @@ const ScribeApiService = {
       body: JSON.stringify({
         scribe_id: scribeId,
         scribble_type: 0,
-        scribble_content: text
+        scribble_content: text,
+        user_id: userId
       }),
     })
       .then(res =>

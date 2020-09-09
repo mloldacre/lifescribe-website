@@ -14,7 +14,7 @@ export default class CurrentScribeEntry extends Component {
   componentDidMount() {
     const { scribeId } = this.props.match.params
     this.context.clearError()
-    ScribeApiService.getScribe(scribeId)
+    ScribeApiService.getScribeById(scribeId)
       .then(this.context.setScribe)
       .catch(this.context.setError)
   }
@@ -27,7 +27,7 @@ export default class CurrentScribeEntry extends Component {
     ev.preventDefault()
     const { scribe } = this.context
     const { text } = ev.target
-    ScribeApiService.postScribble(scribe.id, text.value)
+    ScribeApiService.postScribble(scribe.user_id, scribe.id, text.value)
       .then(this.context.addScribble)
       .then(() => {
         text.value = ''
