@@ -13,8 +13,8 @@ const ScribeApiService = {
           : res.json()
       )
   },
-  getScribe(scribeId) {
-    return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}`, {
+  getScribesByUserId(userId) {
+    return fetch(`${config.API_ENDPOINT}/scribes/${userId}`, {
       headers: {
         // 'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -25,8 +25,8 @@ const ScribeApiService = {
           : res.json()
       )
   },
-  getScribeScribbles(scribeId) {
-    return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}/scribbles`, {
+  getScribeScribbles(userId, scribeId) {
+    return fetch(`${config.API_ENDPOINT}/scribes/scribbles/${userId}/${scribeId}`, {
       headers: {
         // 'authorization': `bearer ${TokenService.getAuthToken()}`,
       },

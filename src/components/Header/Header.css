@@ -6,9 +6,13 @@ header {
   color: white;
   font-size: 30px;
   padding: 10px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-h1{
+h1 {
   font-size: larger;
+}
+
+div {
+  justify-content: space-between;
 }

@@ -13,12 +13,9 @@ export default class ScribeReviewView extends Component {
   static contextType = ScribeContext
 
   componentDidMount() {
-    const { scribeId } = this.props.match.params
+    const { userId ,scribeId } = this.props.match.params
     this.context.clearError()
-    ScribeApiService.getScribe(scribeId)
-      .then(this.context.setScribe)
-      .catch(this.context.setError)
-    ScribeApiService.getScribeScribbles(scribeId)
+    ScribeApiService.getScribeScribbles( userId, scribeId)
       .then(this.context.setScribbles)
       .catch(this.context.setError)
   }
