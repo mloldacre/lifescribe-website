@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
     return (
       <main className="App">
-        <Header />
+        <Route component={Header}/>
 
         <Switch>
           <Route exact path='/' component={Landing} />
@@ -35,7 +35,7 @@ export default class App extends React.Component {
           <PublicRoute path='/signup' component={NewSignup} />
           <PrivateRoute path='/loggedIn' component={ActiveUserView}/>
           <PrivateRoute path='/profile' component={Profile}/>
-          <PrivateRoute path='/scribesCalendar/u/:userId' component={ScribeCalendarView}/>
+          <PrivateRoute path='/scribesCalendar/' component={ScribeCalendarView}/>
           <PrivateRoute path='/scribeReview/:userId/:scribeId' component={ScribeReviewView}/>
           <PrivateRoute path='/scribeEntry/:scribeId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />

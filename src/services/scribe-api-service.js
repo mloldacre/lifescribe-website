@@ -16,7 +16,7 @@ const ScribeApiService = {
   getScribeById(scribeId) {
     return fetch(`${config.API_ENDPOINT}/scribes/${scribeId}`, {
       headers: {
-        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
@@ -26,10 +26,10 @@ const ScribeApiService = {
       )
   },
   
-  getScribesByUserId(userId) {
-    return fetch(`${config.API_ENDPOINT}/scribes/u/${userId}`, {
+  getScribesByUser() {
+    return fetch(`${config.API_ENDPOINT}/scribes/user`, {
       headers: {
-        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
@@ -41,7 +41,7 @@ const ScribeApiService = {
   getScribeScribbles(userId, scribeId) {
     return fetch(`${config.API_ENDPOINT}/scribes/scribbles/${userId}/${scribeId}`, {
       headers: {
-        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
@@ -75,7 +75,7 @@ const ScribeApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        //'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
         scribe_id: scribeId,

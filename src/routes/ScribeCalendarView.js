@@ -9,9 +9,8 @@ export default class ScribeCalendarView extends Component {
   static contextType = ScribeCalendarContext;
 
   componentDidMount() {
-    const { userId } = this.props.match.params
     this.context.clearError()
-    ScribeApiService.getScribesByUserId(userId)
+    ScribeApiService.getScribesByUser()
       .then(this.context.setScribes)
       .catch(this.context.setError)
   }

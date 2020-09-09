@@ -6,7 +6,7 @@ export default class ActiveUserView extends Component {
     return (
       <main>
       
-      <Link to='/scribesCalendar/u/:userId'>
+      <Link to='/scribesCalendar/'>
         <p>Calendar</p>
       </Link>
 
