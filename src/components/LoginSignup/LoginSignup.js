@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 import './LoginSignup.css';
+import {Link} from 'react-router-dom';
 
 export default class LoginSignup extends Component {
   static defaultProps = {
@@ -66,7 +67,7 @@ export default class LoginSignup extends Component {
           </div>
           <button type="submit">Login</button>
           <label htmlFor="LoginNewMembers">New Members</label>
-          <button type="submit">Sign-up!</button>
+          <Link to="/signup" >Sign-up!</Link>
         </fieldset>
       </form>
     );

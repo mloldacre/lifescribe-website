@@ -11,21 +11,21 @@ export default class NewSignup extends Component {
   
   handleSubmit = ev => {
     ev.preventDefault()
-  const { first_name, last_name, email, username, password } = ev.target
+  const { first_name, last_name, email, user_name, password } = ev.target
 
     this.setState({ error: null })
     AuthApiService.postUser({
       first_name: first_name.value,
       last_name: last_name.value,
       email: email.value,
-      username: username.value,
+      user_name: user_name.value,
       password: password.value,
     })
       .then(user => {
         first_name.value = ''
         last_name.value = ''
         email.value = ''
-        username.value = ''
+        user_name.value = ''
         password.value = ''
         this.props.onRegistrationSuccess()
       })
@@ -79,26 +79,26 @@ export default class NewSignup extends Component {
               id='NewSignUpFormEmail'>
             </input>
           </div>
-          <div className='username'>
+          <div className='user_name'>
             <label htmlFor='NewSignUpFormUsername'>
               Username
           </label>
             <input
-              name='username'
+              name='user_name'
               type='text'
               required
               id='NewSignUpFormUsername'>
             </input>
           </div>
           <div className='password'>
-            <label htmlFor='NewSignUpForm__password'>
+            <label htmlFor='NewSignUpFormPassword'>
               Password
             </label>
             <input
               name='password'
               type='password'
               required
-              id='NewSignUpForm__password'>
+              id='NewSignUpFormPassword'>
             </input>
           </div>
           <button type='submit'>
