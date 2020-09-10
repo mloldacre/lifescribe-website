@@ -14,6 +14,7 @@ const ScribeContext = React.createContext({
   clearScribe: () => { },
   setScribbles: () => { },
   addScribble: () => { },
+  deleteScribble: () => { },
 })
 
 export default ScribeContext
@@ -21,6 +22,7 @@ export default ScribeContext
 export class ScribeProvider extends Component {
   state = {
     scribe: nullScribe,
+    scribbles: [],
     error: null,
   };
 
@@ -52,6 +54,12 @@ export class ScribeProvider extends Component {
       scribble
     ])
   }
+  
+  deleteScribble = scribbleId => {
+    this.setScribbles({
+      scribbles: this.state.scribbles.filter(scribble => scribble.id != scribbleId)
+    })
+  }
 
   render() {
     const value = {
@@ -64,6 +72,7 @@ export class ScribeProvider extends Component {
       setScribbles: this.setScribbles,
       clearScribe: this.clearScribe,
       addScribble: this.addScribble,
+      deleteScribble: this.deleteScribble
     }
     return (
       <ScribeContext.Provider value={value}>

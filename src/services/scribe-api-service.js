@@ -91,7 +91,19 @@ const ScribeApiService = {
       )
   },
   
-  
+  deleteScribble(scribbleId){
+    fetch(`${config.API_ENDPOINT}/scribbles/${scribbleId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(res => {
+        if (!res.ok)
+          return res.json().then(e => Promise.reject(e))
+        return res.json()
+      })
+  }
   
 }
 
