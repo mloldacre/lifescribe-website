@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import config from '../../config'
 import ScribeApiService from '../../services/scribe-api-service';
 import ScribeContext from '../../contexts/ScribeContext';
 import './CurrentScribeReview.css';
+import moment from 'moment-timezone';
 
 export default class CurrentScribeReview extends Component {
   static defaultProps = {
@@ -13,7 +13,8 @@ export default class CurrentScribeReview extends Component {
   
   handleClickDelete = ev => {
     ev.preventDefault()
-    const scribbleId = this.props.
+    const scribbleId = this.context
+    console.log('scribbleId:', scribbleId)
 
     ScribeApiService.deleteScribble(scribbleId)
       .then(() => {
@@ -25,7 +26,7 @@ export default class CurrentScribeReview extends Component {
       })
   }
   
-  render() { 
+  render() {             
     const { date, scribeId, scribbles } = this.props            
     return (
       <div className="CurrentScribeReview">
@@ -35,14 +36,16 @@ export default class CurrentScribeReview extends Component {
       </div>
     );  
   }
+
 }
 
+//TODO Get scribble ID passed from this function to delete action above ^
 function ScribeScribbles({ scribbles = [] }) {
   return (
     <ul className='ScribeReviewViewScribblesList'>
       {scribbles.map(scribble =>
         <li key={scribble.id} className='ScribeReviewViewScribble'>
-          <p>{scribble.scribble_content}</p>
+          <p>{moment(scribble.time_created).tz('America/New_York').format('MM/DD/YYYY hh:mm')}</p>
           <button
             className='Scribble__edit'
             type='button'>
@@ -50,13 +53,14 @@ function ScribeScribbles({ scribbles = [] }) {
             </button>
           <button
             className='Scribble__delete'
-            type='button'>
+            type='button'
+            onClick={this.handleClickDelete}>
             Delete
             </button>
-          
         </li>)}
     </ul>
   )
 }
+//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
 
-//onClick={this.handleClickDelete}
+//

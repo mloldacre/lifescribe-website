@@ -57,7 +57,7 @@ export class ScribeProvider extends Component {
   
   deleteScribble = scribbleId => {
     this.setScribbles({
-      scribbles: this.state.scribbles.filter(scribble => scribble.id != scribbleId)
+      scribbles: this.state.scribbles.filter(scribble => scribble.id !== scribbleId)
     })
   }
 
