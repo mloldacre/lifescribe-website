@@ -25,7 +25,7 @@ const ScribeApiService = {
           : res.json()
       )
   },
-  
+
   getScribesByUser() {
     return fetch(`${config.API_ENDPOINT}/scribes/`, {
       headers: {
@@ -67,8 +67,8 @@ const ScribeApiService = {
           : res.json()
       )
   },
-  
-  
+
+
   //TODO Modify to get media scribbles too!
   postScribble(userId, scribeId, text) {
     return fetch(`${config.API_ENDPOINT}/scribbles`, {
@@ -90,21 +90,22 @@ const ScribeApiService = {
           : res.json()
       )
   },
-  
-  deleteScribble(scribbleId){
-    fetch(`${config.API_ENDPOINT}/scribbles/${scribbleId}`, {
+
+  deleteScribble(scribbleId) {
+    return fetch(`${config.API_ENDPOINT}/scribbles/${scribbleId}`, {
       method: 'DELETE',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res => {
-        if (!res.ok)
-          return res.json().then(e => Promise.reject(e))
-        return res.json()
+          (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : Promise.resolve('')
       })
   }
-  
+
 }
 
 export default ScribeApiService

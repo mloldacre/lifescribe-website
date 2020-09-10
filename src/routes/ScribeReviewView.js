@@ -12,6 +12,16 @@ export default class ScribeReviewView extends Component {
 
   static contextType = ScribeContext
 
+  handleScribbleDelete = (scribbleId) => {
+    ScribeApiService.deleteScribble(scribbleId)
+      .then(() => {
+        this.context.clearError()
+        this.context.deleteScribble(scribbleId)
+        }
+      )
+      .catch(this.context.setError)
+  }
+
   componentDidMount() {
     this.context.clearError()
     ScribeApiService.getScribeScribbles()
@@ -29,6 +39,7 @@ export default class ScribeReviewView extends Component {
       date={scribe.date_created}
       scribeId={scribe.id}
       scribbles={scribbles}
+      onDelete={this.handleScribbleDelete}
     />
   }
 

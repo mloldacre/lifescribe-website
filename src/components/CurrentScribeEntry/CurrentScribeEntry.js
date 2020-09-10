@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ScribeApiService from '../../services/scribe-api-service';
 import ScribeContext from '../../contexts/ScribeContext';
 import { Section } from '../Utils/Utils'
+import moment from 'moment-timezone';
 import './CurrentScribeEntry.css';
 
 export default class CurrentScribeEntry extends Component {
@@ -39,7 +40,7 @@ export default class CurrentScribeEntry extends Component {
     return (
       <Section className="ScribeEntryView">
         <h2>Your Thoughts</h2>
-        {scribe.date_created}
+        {moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY')}
         <form
           className="ScribbleEntryForm"
           onSubmit={this.handleSubmit}
@@ -69,6 +70,8 @@ export default class CurrentScribeEntry extends Component {
     )
 
   }
+  
+  //{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
   
   //TODO Decide what to render and where to navigate after submission
   // render() {
