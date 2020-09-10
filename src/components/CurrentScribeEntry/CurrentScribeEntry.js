@@ -12,9 +12,8 @@ export default class CurrentScribeEntry extends Component {
   static contextType = ScribeContext
 
   componentDidMount() {
-    const { scribeId } = this.props.match.params
     this.context.clearError()
-    ScribeApiService.getScribeById(scribeId)
+    ScribeApiService.getCurrentScribe()
       .then(this.context.setScribe)
       .catch(this.context.setError)
   }

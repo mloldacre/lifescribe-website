@@ -9,10 +9,13 @@ export default class Calendar extends Component {
     return (
       // <Link to={`/scribes/${scribe.id}`} className='Calendar'>
       <div className="ScribeInCalendar">
-        {moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
+        {moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY')}
       </div>      
       // {/* </Link> */}
     );
     
   }
 }
+
+
+//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}

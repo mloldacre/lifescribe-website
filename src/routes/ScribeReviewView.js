@@ -13,9 +13,8 @@ export default class ScribeReviewView extends Component {
   static contextType = ScribeContext
 
   componentDidMount() {
-    const { userId ,scribeId } = this.props.match.params
     this.context.clearError()
-    ScribeApiService.getScribeScribbles( userId, scribeId)
+    ScribeApiService.getScribeScribbles()
       .then(this.context.setScribbles)
       .catch(this.context.setError)
   }
@@ -39,7 +38,7 @@ export default class ScribeReviewView extends Component {
       <Section className="ScribeReviewView">
         <h3>Current Scribe Review Page</h3>
         {error
-          ? <p className="error">There was an on the Scribe Review Page error, try again</p>
+          ? <p className="error">No scribes to review today</p>
           : this.renderScribe()}
       </Section>
     );

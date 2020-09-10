@@ -10,10 +10,10 @@ export default class ActiveUserView extends Component {
         <p>Calendar</p>
       </Link>
 
-        <Link to='/scribeReview/:userId/:scribeId'>
+        <Link to='/scribeReview/'>
           <p>Current Scribe</p>
       </Link>
-        <Link to='/scribeEntry/:scribeId'>
+        <Link to='/scribeEntry/'>
         Enter Scribbles
       </Link>
       </main>
