@@ -67,7 +67,9 @@ export default class LoginSignup extends Component {
           </div>
           <button type="submit">Login</button>
           <label htmlFor="LoginNewMembers">New Members</label>
-          <Link to="/signup" >Sign-up!</Link>
+          <Link to="/signup" >
+          <button type='button'>Sign-up!</button>
+          </Link>
         </fieldset>
       </form>
     );

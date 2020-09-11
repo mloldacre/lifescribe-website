@@ -28,20 +28,10 @@ export default class ScribeReviewView extends Component {
       .then(() => {
         this.context.clearError()
         this.context.deleteScribble(scribbleId)
-      }
-      )
+      })
       .catch(this.context.setError)
   }
 
-  handleScribbleEdit = (scribbleId, text) => {
-    const updatedScribble = { scribbleId, text }
-    // ScribeApiService.updateScribble(scribbleId, text)
-    //   .then(() => {
-    //     this.context.clearError()
-    //     this.context.updateScribble(updatedScribble)
-    //   })
-    //   .catch(this.context.setError)
-  }
 
   renderScribe() {
     const { scribe, scribbles } = this.context
@@ -51,7 +41,6 @@ export default class ScribeReviewView extends Component {
       scribeId={scribe.id}
       scribbles={scribbles}
       onDelete={this.handleScribbleDelete}
-      onEdit={this.handleScribbleEdit}
     />
   }
 

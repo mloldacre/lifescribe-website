@@ -1,3 +1,4 @@
+import TokenService from '../services/token-service'
 import config from '../config'
 
 const AuthApiService = {
@@ -28,6 +29,50 @@ const AuthApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
+  },
+  
+  getUser() {
+    return fetch(`${config.API_ENDPOINT}/users`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+  
+  updateUser(updatedFields) {
+    return fetch(`${config.API_ENDPOINT}/users`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify(updatedFields),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : Promise.resolve('')
+      )
+  },
+  
+  deleteUser() {
+    return fetch(`${config.API_ENDPOINT}/users`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+      .then(res => {
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : Promise.resolve('')
+      })
   },
 
 }

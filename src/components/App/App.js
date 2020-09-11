@@ -16,6 +16,7 @@ import NewSignup from '../NewSignup/NewSignup'
 import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import ScribeReviewView from '../../routes/ScribeReviewView';
 import CurrentScribeEntry from '../CurrentScribeEntry/CurrentScribeEntry';
+import EditUserView from '../../routes/EditUserView'
 import './App.css';
 
 
@@ -39,6 +40,7 @@ export default class App extends React.Component {
           <PrivateRoute path='/scribeReview/' component={ScribeReviewView}/>
           <PrivateRoute exact path='/scribbleEntry/' component={CurrentScribeEntry}/>
           <PrivateRoute path='/scribbleEntry/:scribbleId' component={CurrentScribeEntry}/>
+          <PrivateRoute path='/editProfile' component={EditUserView}/>
           <Route component={NotFound} />
         </Switch>
 

@@ -7,7 +7,7 @@ import moment from 'moment-timezone';
 export default class CurrentScribeReview extends Component {
 
   static contextType = ScribeContext
-
+//TODO fix time displayed
   renderScribeScribbles = ( scribbles = [] ) => {
     const { onDelete, onEdit } = this.props 
     if (!scribbles.length) {return null}
@@ -15,12 +15,11 @@ export default class CurrentScribeReview extends Component {
       <ul className='ScribeReviewViewScribblesList'>
         {scribbles.map(scribble =>
           <li key={scribble.id} className='ScribeReviewViewScribble'>
-            <p>{moment(scribble.time_created).tz('America/New_York').format('MM/DD/YYYY hh:mm:ss a')}</p>
+            <p>{moment(scribble.time_created).tz('America/New_York').format('hh:mm:ss a')}</p>
             <p>{scribble.scribble_content}</p>
             <Link to={`/scribbleEntry/${scribble.id}`}><button
               className='Scribble__edit'
-              type='button'
-              onClick={() => onEdit(scribble.id)}>
+              type='button'>
               Edit
             </button>
             </Link>

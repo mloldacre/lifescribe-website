@@ -40,6 +40,9 @@ export default class CurrentScribeEntry extends Component {
     if (params.scribbleId) {
       ScribeApiService.updateScribble(params.scribbleId, text.value) //add edit API call here!!!!!!!!
         .then(scribble => this.setState({ scribble }))
+        .then(() => {
+          text.value = ''
+        })
     } else {
       ScribeApiService.postScribble(scribe.user_id, scribe.id, text.value)
         .then(this.context.addScribble)
@@ -65,7 +68,7 @@ export default class CurrentScribeEntry extends Component {
             <textarea
               id="text"
               name="text"
-              placeholder="Enter a text scribble!"
+              placeholder={scribble && scribble.scribble_content ? scribble.scribble_content : 'Enter a text scribble!'}
               defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
             </textarea>
           </article>

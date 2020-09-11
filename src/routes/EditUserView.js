@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import './Profile.css';
-import AuthApiService from '../../services/auth-api-service'
-import UserContext from '../../contexts/UserContext'
-import { Link } from 'react-router-dom';
-import TokenService from '../../services/token-service';
+import AuthApiService from '../services/auth-api-service'
+import UserContext from '../contexts/UserContext'
 
 export default class Profile extends Component {
   static defaultProps = {
@@ -12,6 +9,13 @@ export default class Profile extends Component {
       push: () => { },
     },
   }
+  
+  onUpdateSuccess = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/profile'
+    history.push(destination)
+  }
+
   static contextType = UserContext;
   
   componentDidMount() {
@@ -20,31 +24,43 @@ export default class Profile extends Component {
       .then(this.context.setUser)
       .catch(this.context.setError)
   }
-
+  
+  
   state = { error: null }
   
-  handleDelete = (userId) => {
-    this.context.clearError()
-    AuthApiService.deleteUser(userId)
+  handleUpdate = ev => {
+    ev.preventDefault()
+    this.setState({ error: null })
+    const { first_name, last_name, email, } = ev.target
+
+    AuthApiService.updateUser({
+      first_name: first_name.value,
+      last_name: last_name.value,
+      email: email.value,
+    })
       .then(() => {
-        TokenService.clearAuthToken()
-        this.props.history.push('/')
+        this.context.setUser()
+        this.onUpdateSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
       })
   }
   
   handleClickCancel = () => {
-    this.props.history.push('/loggedIn')
+    this.props.history.push('/profile')
   };
 
   render() {
     const { error } = this.context
     const { user } = this.context
-    console.log("User:", user);
+    console.log('UserEdit:', user)
     return (
       <div className="Profile">
-        My Profile
+        Edit 
         <form
           className='ProfileForm'
+          onSubmit={this.handleUpdate}
         >
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
@@ -56,8 +72,6 @@ export default class Profile extends Component {
             <input
               name='first_name'
               type='text'
-              value={user.first_name}
-              disabled
               id='ProfileFormFirstName'>
             </input>
           </div>
@@ -68,8 +82,6 @@ export default class Profile extends Component {
             <input
               name='last_name'
               type='text'
-              value={user.last_name}
-              disabled
               id='ProfileFormLastName'>
             </input>
           </div>
@@ -80,34 +92,34 @@ export default class Profile extends Component {
             <input
               name='email'
               type='text'
-              value={user.email}
-              disabled
               id='ProfileFormEmail'>
             </input>
           </div>
-          <div className='user_name'>
+          {/* <div className='user_name'>
             <label htmlFor='ProfileFormUsername'>
               Username
           </label>
             <input
               name='user_name'
               type='text'
-              value={user.user_name}
-              disabled
               id='ProfileFormUsername'>
             </input>
           </div>
-          <Link to='/editProfile'>
-            <button type='button'
-            user={user}>
-              Edit
+          <div className='password'>
+            <label htmlFor='ProfileFormPassword'>
+              Password
+            </label>
+            <input
+              name='password'
+              type='password'
+              id='ProfileFormPassword'>
+            </input>
+          </div> */}
+          <button type='submit'>
+            Edit
           </button>
-          </Link>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
-        </button>
-          <button type='button' onClick={() => this.handleDelete(user.id)}>
-            Delete
+          <button type='button' onClick={this.handleClickCancel}>
+            Cancel
         </button>
         </form>
       </div>
