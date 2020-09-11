@@ -2,17 +2,6 @@ import TokenService from '../services/token-service'
 import config from '../config'
 
 const ScribeApiService = {
-  getScribes() {
-    return fetch(`${config.API_ENDPOINT}/scribes`, {
-      headers: {
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-  },
   getCurrentScribe() {
     return fetch(`${config.API_ENDPOINT}/scribes/currentScribe`, {
       headers: {
@@ -101,6 +90,24 @@ const ScribeApiService = {
     })
       .then(res => {
           (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : Promise.resolve('')
+      })
+  },
+  
+  updateScribble(scribbleId, text) {
+    return fetch(`${config.API_ENDPOINT}/scribbles/${scribbleId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        scribble_content: text
+      }),
+    })
+      .then(res => {
+        (!res.ok)
           ? res.json().then(e => Promise.reject(e))
           : Promise.resolve('')
       })

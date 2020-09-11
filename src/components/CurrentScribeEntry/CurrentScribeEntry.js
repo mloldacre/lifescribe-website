@@ -13,6 +13,12 @@ export default class CurrentScribeEntry extends Component {
   static contextType = ScribeContext
 
   componentDidMount() {
+    const { match } = this.props
+    const { params } = match
+    if (params.scribbleId) {
+      ScribeApiService.getScribbleById(params.scribbleId)
+        .then(scribble => this.setState({ scribble }))
+    }
     this.context.clearError()
     ScribeApiService.getCurrentScribe()
       .then(this.context.setScribe)
@@ -25,17 +31,27 @@ export default class CurrentScribeEntry extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
+    //look for params like at the top, if they exist, do API call to edit(PATCH)
+    //endpoint
+    const { match } = this.props
+    const { params } = match
     const { scribe } = this.context
     const { text } = ev.target
-    ScribeApiService.postScribble(scribe.user_id, scribe.id, text.value)
-      .then(this.context.addScribble)
-      .then(() => {
-        text.value = ''
-      })
-      .catch(this.context.setError)
+    if (params.scribbleId) {
+      ScribeApiService.updateScribble(params.scribbleId, text.value) //add edit API call here!!!!!!!!
+        .then(scribble => this.setState({ scribble }))
+    } else {
+      ScribeApiService.postScribble(scribe.user_id, scribe.id, text.value)
+        .then(this.context.addScribble)
+        .then(() => {
+          text.value = ''
+        })
+        .catch(this.context.setError)
+    }
   }
 
   render() {
+    const { scribble } = this.context
     const { scribe } = this.context
     return (
       <Section className="ScribeEntryView">
@@ -49,7 +65,8 @@ export default class CurrentScribeEntry extends Component {
             <textarea
               id="text"
               name="text"
-              placeholder="Enter a text scribble!">
+              placeholder="Enter a text scribble!"
+              defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
             </textarea>
           </article>
           <button type="submit">
@@ -70,9 +87,9 @@ export default class CurrentScribeEntry extends Component {
     )
 
   }
-  
+
   //{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
-  
+
   //TODO Decide what to render and where to navigate after submission
   // render() {
   //   const { error } = this.context

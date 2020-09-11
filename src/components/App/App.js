@@ -37,7 +37,8 @@ export default class App extends React.Component {
           <PrivateRoute path='/profile' component={Profile}/>
           <PrivateRoute path='/scribesCalendar/' component={ScribeCalendarView}/>
           <PrivateRoute path='/scribeReview/' component={ScribeReviewView}/>
-          <PrivateRoute path='/scribeEntry/' component={CurrentScribeEntry}/>
+          <PrivateRoute exact path='/scribbleEntry/' component={CurrentScribeEntry}/>
+          <PrivateRoute path='/scribbleEntry/:scribbleId' component={CurrentScribeEntry}/>
           <Route component={NotFound} />
         </Switch>
 
