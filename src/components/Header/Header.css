@@ -1,18 +1,33 @@
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: rgb(32, 115, 240);
-  margin-bottom: 20px;
-  color: white;
-  font-size: 30px;
+  margin-bottom: 10px;
+  font-size: 60px;
   padding: 10px;
   justify-content: space-between;
 }
 
-h1 {
-  font-size: larger;
+Link {
+  color: white;
 }
 
-div {
+header span {
+  display: flex;
   justify-content: space-between;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+header a:link {
+  color: white;
+  text-decoration: none;
+}
+
+header a:visited {
+  color: white;
+  text-decoration: none;
 }

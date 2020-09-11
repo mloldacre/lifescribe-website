@@ -3,6 +3,7 @@ import ScribeApiService from '../services/scribe-api-service';
 import ScribeCalendarContext from '../contexts/ScribeCalendarContext';
 import { Section } from '../components/Utils/Utils'
 import Calendar from '../components/Calendar/Calendar'
+import './style.css'
 
 
 export default class ScribeCalendarView extends Component {
