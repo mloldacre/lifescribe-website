@@ -7,9 +7,8 @@ export default function Landing() {
     <div className="Landing">
       Subscribe to YOUR life!
       <Link to='/demo'>
-        <button>
           Try a Scribe!
-      </button> </Link>
+       </Link>
     </div>
   );
 }
