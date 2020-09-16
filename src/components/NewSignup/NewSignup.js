@@ -4,7 +4,14 @@ import AuthApiService from '../../services/auth-api-service'
 
 export default class NewSignup extends Component {
   static defaultProps = {
-    onRegistrationSuccess: () => { }
+    history: {
+      push: () => { },
+    },
+  }
+
+  handleRegistrationSuccess = user => {
+    const { history } = this.props
+    history.push('/loginSignup')
   }
 
   state = { error: null }
@@ -27,7 +34,7 @@ export default class NewSignup extends Component {
         email.value = ''
         user_name.value = ''
         password.value = ''
-        this.props.onRegistrationSuccess()
+        this.handleRegistrationSuccess()
       })
       .catch(res => {
         this.setState({ error: res.error })
