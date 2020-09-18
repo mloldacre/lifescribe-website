@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
-import './LoginSignup.css';
+import '../../Style.css';
 import {Link} from 'react-router-dom';
 
 export default class LoginSignup extends Component {
@@ -68,7 +68,7 @@ export default class LoginSignup extends Component {
           <button type="submit">Login</button>
           <label htmlFor="LoginNewMembers">New Members</label>
           <Link to="/signup" >
-          <button type='button'>Sign-up!</button>
+          Sign-up!
           </Link>
         </fieldset>
       </form>

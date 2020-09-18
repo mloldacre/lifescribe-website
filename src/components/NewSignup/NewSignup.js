@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './NewSignup.css';
+import '../../Style.css';
 import AuthApiService from '../../services/auth-api-service'
 
 export default class NewSignup extends Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css';
+import '../../Style.css';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
 

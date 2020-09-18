@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment-timezone';
-import './Calendar.css';
+import '../../Style.css';
 
 export default class Calendar extends Component {
   render () {

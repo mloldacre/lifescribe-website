@@ -17,7 +17,7 @@ import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import ScribeReviewView from '../../routes/ScribeReviewView';
 import CurrentScribeEntry from '../CurrentScribeEntry/CurrentScribeEntry';
 import EditUserView from '../../routes/EditUserView'
-import './App.css';
+import '../../Style.css';
 
 
 export default class App extends React.Component {

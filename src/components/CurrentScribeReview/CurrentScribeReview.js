@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScribeContext from '../../contexts/ScribeContext';
 import { Link } from 'react-router-dom';
-import './CurrentScribeReview.css';
+import '../../Style.css';
 import moment from 'moment-timezone';
 
 export default class CurrentScribeReview extends Component {

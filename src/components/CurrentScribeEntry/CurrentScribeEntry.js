@@ -3,7 +3,7 @@ import ScribeApiService from '../../services/scribe-api-service';
 import ScribeContext from '../../contexts/ScribeContext';
 import { Section } from '../Utils/Utils'
 import moment from 'moment-timezone';
-import './CurrentScribeEntry.css';
+import '../../Style.css';
 
 export default class CurrentScribeEntry extends Component {
   static defaultProps = {
