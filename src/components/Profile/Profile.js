@@ -42,7 +42,7 @@ export default class Profile extends Component {
     console.log("User:", user);
     return (
       <div className="Profile">
-        My Profile
+        <h2>My Profile</h2>
         <form
           className='ProfileForm'
         >
@@ -51,7 +51,7 @@ export default class Profile extends Component {
           </div>
           <div className='first_name'>
             <label htmlFor='ProfileFormFirstName'>
-              First name
+              First name:
             </label>
             <input
               name='first_name'
@@ -63,7 +63,7 @@ export default class Profile extends Component {
           </div>
           <div className='last_name'>
             <label htmlFor='ProfileFormLastName'>
-              Last name
+              Last name:
             </label>
             <input
               name='last_name'
@@ -75,7 +75,7 @@ export default class Profile extends Component {
           </div>
           <div className='email'>
             <label htmlFor='ProfileFormEmail'>
-              Email
+              Email:
           </label>
             <input
               name='email'
@@ -87,7 +87,7 @@ export default class Profile extends Component {
           </div>
           <div className='user_name'>
             <label htmlFor='ProfileFormUsername'>
-              Username
+              Username:
           </label>
             <input
               name='user_name'

@@ -84,6 +84,10 @@ li {
   text-align: center;
 }
 
+.Profile h2 {
+  color: rgb(2, 32, 78);
+}
+
 .Registration {
   flex: 1;
   text-align: center;
