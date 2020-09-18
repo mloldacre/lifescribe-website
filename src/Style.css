@@ -1,6 +1,7 @@
 /* Main Section */
 
 main {
+  display: flex;
   flex: 1;
   text-align: center;
   flex-direction: column;
@@ -37,7 +38,6 @@ a:active {
 }
 
 .App {
-  display: flex;
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
@@ -59,6 +59,10 @@ li {
   text-align: center;
 }
 
+.Demo h1 {
+  color: rgb(2, 32, 78);
+}
+
 .LoginSignup {
   display: flex;
   flex: 1;
@@ -75,26 +79,45 @@ li {
   text-align: center;
 }
 
+.Profile {
+  flex: 1;
+  text-align: center;
+}
+
+.Registration {
+  flex: 1;
+  text-align: center;
+}
+
 /* Header */
 
-header {
+.Header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: rgb(32, 115, 240);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 60px;
-  padding: 10px;
+  padding: 5px;
   justify-content: space-between;
 }
 
-header span {
+.header nav {
   display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.header span {
+  display: flex;
+  flex: 1;
   justify-content: space-between;
   text-decoration: none;
 }
 
 h1 {
   font-size: 60px;
+  color: white;
 }
 
 header a:link {

@@ -9,7 +9,7 @@ export default class CurrentScribeReview extends Component {
   static contextType = ScribeContext
 //TODO fix time displayed
   renderScribeScribbles = ( scribbles = [] ) => {
-    const { onDelete, onEdit } = this.props 
+    const { onDelete, } = this.props 
     if (!scribbles.length) {return null}
     return (
       <ul className='ScribeReviewViewScribblesList'>

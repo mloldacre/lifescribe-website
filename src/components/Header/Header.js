@@ -11,9 +11,6 @@ export default class Header extends Component {
   renderActiveUser() {
     return (
       <div className='Headerlogged-in'>
-        <Link to='/loggedIn'>
-          <h1>LifeScribe</h1>
-        </Link>
         <Link
           onClick={this.handleLogoutClick}
           to='/'>
@@ -29,11 +26,8 @@ export default class Header extends Component {
   renderDemoUser() {
     return (
       <div className='HeaderNotlogged-in'>
-        <Link to='/'>
-          <h1>LifeScribe</h1>
-        </Link>
-        <Link to='/loginSignup'>
-          <span>Login/Signup</span>
+        <Link to='/loginRegister'>
+          <span>Login/Register</span>
         </Link>
       </div>
 
@@ -43,6 +37,13 @@ export default class Header extends Component {
   render() {
     return (
       <header className="Header">
+        {TokenService.hasAuthToken()
+          ?<Link to='/loggedIn'>
+            <h1>LifeScribe</h1>
+          </Link>
+          : <Link to='/'>
+            <h1>LifeScribe</h1>
+          </Link>}
         <nav>
           {TokenService.hasAuthToken()
             ? this.renderActiveUser()

@@ -5,12 +5,10 @@ import '../Style.css';
 export default class ActiveUserView extends Component {
   render() {
     return (
-      <main>
-      
+      <main>      
       <Link to='/scribesCalendar/'>
         <p>Calendar</p>
       </Link>
-
         <Link to='/scribeReview/'>
           <p>Current Scribe</p>
       </Link>

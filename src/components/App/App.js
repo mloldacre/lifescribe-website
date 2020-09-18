@@ -12,7 +12,7 @@ import About from '../About/About';
 import Profile from '../Profile/Profile';
 import ActiveUserView from '../../routes/ActiveUserView'
 import Login from '../../routes/Login'
-import NewSignup from '../NewSignup/NewSignup'
+import Registration from '../Registration/Registration'
 import ScribeCalendarView from '../../routes/ScribeCalendarView'
 import ScribeReviewView from '../../routes/ScribeReviewView';
 import CurrentScribeEntry from '../CurrentScribeEntry/CurrentScribeEntry';
@@ -29,11 +29,11 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path='/' component={Landing} />
-          <PublicRoute path='/loginSignup' component={Login} />
+          <PublicRoute path='/loginRegister' component={Login} />
           <PublicRoute path='/contact' component={Contact} />
           <PublicRoute path='/about' component={About} />
           <PublicRoute path='/demo' component={Demo} />
-          <PublicRoute path='/signup' component={NewSignup} />
+          <PublicRoute path='/registration' component={Registration} />
           <PrivateRoute path='/loggedIn' component={ActiveUserView}/>
           <PrivateRoute path='/profile' component={Profile}/>
           <PrivateRoute path='/scribesCalendar/' component={ScribeCalendarView}/>

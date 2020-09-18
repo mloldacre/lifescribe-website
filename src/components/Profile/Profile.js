@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Profile.css';
+import '../../Style.css';
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import { Link } from 'react-router-dom';

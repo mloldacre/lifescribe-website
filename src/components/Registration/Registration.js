@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../Style.css';
 import AuthApiService from '../../services/auth-api-service'
 
-export default class NewSignup extends Component {
+export default class Registration extends Component {
   static defaultProps = {
     history: {
       push: () => { },
@@ -11,7 +11,7 @@ export default class NewSignup extends Component {
 
   handleRegistrationSuccess = user => {
     const { history } = this.props
-    history.push('/loginSignup')
+    history.push('/loginRegister')
   }
 
   state = { error: null }
@@ -44,72 +44,72 @@ export default class NewSignup extends Component {
   render() {
     const { error} = this.state
     return (
-      <div className="NewSignup">
-        New Signup Page
+      <div className="Registration">
+        Registration
         <form
-          className='NewSignUpForm'
+          className='RegistrationForm'
           onSubmit={this.handleSubmit}
         >
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
           </div>
           <div className='first_name'>
-            <label htmlFor='NewSignUpFormFirstName'>
-              First name
+            <label htmlFor='RegistrationFormFirstName'>
+              First name:
             </label>
             <input
               name='first_name'
               type='text'
               required
-              id='NewSignUpFormFirstName'>
+              id='RegistrationFormFirstName'>
             </input>
           </div>
           <div className='last_name'>
-            <label htmlFor='NewSignUpFormLastName'>
-              Last name
+            <label htmlFor='RegistrationFormLastName'>
+              Last name:
             </label>
             <input
               name='last_name'
               type='text'
               required
-              id='NewSignUpFormLastName'>
+              id='RegistrationFormLastName'>
             </input>
           </div>
           <div className='email'>
-            <label htmlFor='NewSignUpFormEmail'>
-              Email
+            <label htmlFor='RegistrationFormEmail'>
+              Email:
           </label>
             <input
               name='email'
               type='text'
               required
-              id='NewSignUpFormEmail'>
+              id='RegistrationFormEmail'>
             </input>
           </div>
           <div className='user_name'>
-            <label htmlFor='NewSignUpFormUsername'>
-              Username
+            <label htmlFor='RegistrationFormUsername'>
+              Username:
           </label>
             <input
               name='user_name'
               type='text'
               required
-              id='NewSignUpFormUsername'>
+              id='RegistrationFormUsername'>
             </input>
           </div>
           <div className='password'>
-            <label htmlFor='NewSignUpFormPassword'>
-              Password
+            <label htmlFor='RegistrationFormPassword'>
+              Password:
             </label>
             <input
               name='password'
               type='password'
               required
-              id='NewSignUpFormPassword'>
+              id='RegistrationFormPassword'>
             </input>
           </div>
           <button type='submit'>
-            Sign-up!
+            Register!
         </button>
         </form>
       </div>
