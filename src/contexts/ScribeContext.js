@@ -6,6 +6,7 @@ export const nullScribe = {
 
 const ScribeContext = React.createContext({
   scribe: nullScribe,
+  scribes: [],
   scribbles: [],
   error: null,
   setError: () => { },
@@ -16,6 +17,7 @@ const ScribeContext = React.createContext({
   addScribble: () => { },
   deleteScribble: () => { },
   updateScribble: () => { },
+  setScribes: () => { },
 })
 
 export default ScribeContext
@@ -23,6 +25,7 @@ export default ScribeContext
 export class ScribeProvider extends Component {
   state = {
     scribe: nullScribe,
+    scribes: [],
     scribbles: [],
     error: null,
   };
@@ -38,6 +41,11 @@ export class ScribeProvider extends Component {
 
   setScribe = scribe => {
     this.setState({ scribe })
+  }
+  
+  setScribes = scribes => {
+
+    this.setState({ scribes })
   }
 
   setScribbles = scribbles => {
@@ -72,11 +80,13 @@ export class ScribeProvider extends Component {
   render() {
     const value = {
       scribe: this.state.scribe,
+      scribes: this.state.scribes,
       scribbles: this.state.scribbles,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setScribe: this.setScribe,
+      setScribes: this.setScribes,
       setScribbles: this.setScribbles,
       clearScribe: this.clearScribe,
       addScribble: this.addScribble,

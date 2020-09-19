@@ -13,7 +13,7 @@ export default class Profile extends Component {
     },
   }
   static contextType = UserContext;
-  
+
   componentDidMount() {
     this.context.clearError()
     AuthApiService.getUser()
@@ -22,7 +22,7 @@ export default class Profile extends Component {
   }
 
   state = { error: null }
-  
+
   handleDelete = (userId) => {
     this.context.clearError()
     AuthApiService.deleteUser(userId)
@@ -31,7 +31,7 @@ export default class Profile extends Component {
         this.props.history.push('/')
       })
   }
-  
+
   handleClickCancel = () => {
     this.props.history.push('/loggedIn')
   };
@@ -47,7 +47,9 @@ export default class Profile extends Component {
           className='ProfileForm'
         >
           <div role='alert'>
-            {error && <p className='red'>{error}</p>}
+            {error
+              ? <p className='red'>{error}</p>
+              : null}
           </div>
           <div className='first_name'>
             <label htmlFor='ProfileFormFirstName'>
@@ -99,12 +101,12 @@ export default class Profile extends Component {
           </div>
           <Link to='/editProfile'>
             <button type='button'
-            user={user}>
+              user={user}>
               Edit
           </button>
           </Link>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
+          <button type='button' onClick={this.handleClickCancel}>
+            Cancel
         </button>
           <button type='button' onClick={() => this.handleDelete(user.id)}>
             Delete

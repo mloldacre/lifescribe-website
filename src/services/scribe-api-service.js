@@ -53,6 +53,19 @@ const ScribeApiService = {
       )
   },
   
+  getScribblesForScribe(scribeId) {
+    return fetch(`${config.API_ENDPOINT}/scribbles/for_scribe/${scribeId}`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+  
   postScribe(userId) {
     return fetch(`${config.API_ENDPOINT}/scribes`, {
       method: 'POST',

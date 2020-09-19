@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ScribeApiService from '../services/scribe-api-service';
-import ScribeCalendarContext from '../contexts/ScribeCalendarContext';
+import ScribeContext from '../contexts/ScribeContext';
 import { Section } from '../components/Utils/Utils'
 import Calendar from '../components/Calendar/Calendar'
 import './style.css'
 
 
 export default class ScribeCalendarView extends Component {
-  static contextType = ScribeCalendarContext;
+  static contextType = ScribeContext;
 
   componentDidMount() {
     this.context.clearError()
