@@ -15,9 +15,10 @@ export default class CurrentScribeReview extends Component {
       <ul className='ScribeReviewViewScribblesList'>
         {scribbles.map(scribble =>
           <li key={scribble.id} className='ScribeReviewViewScribble'>
+          <span></span>
             <p>{moment(scribble.time_created).tz('America/New_York').format('hh:mm:ss a')}</p>
             <p>{scribble.scribble_content}</p>
-            <Link to={`/scribbleEntry/${scribble.id}`}><button
+            <div><Link to={`/scribbleEntry/${scribble.id}`}><button
               className='Scribble__edit'
               type='button'>
               Edit
@@ -29,6 +30,7 @@ export default class CurrentScribeReview extends Component {
               onClick={() => onDelete(scribble.id)}>
               Delete
             </button>
+            </div>
           </li>)}
       </ul>
     )
@@ -39,8 +41,7 @@ export default class CurrentScribeReview extends Component {
     console.log("CSR: ScribeId",scribeId)
     return (
       <div className="CurrentScribeReview">
-        <h1>{moment(date).tz('America/New_York').format('MM/DD/YYYY')}</h1>
-        <h3>{scribeId}</h3>
+        <h3>{moment(date).tz('America/New_York').format('MM/DD/YYYY')}</h3>
         {this.renderScribeScribbles(scribbles)}
       </div>
     );

@@ -18,6 +18,51 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  color: rgb(2, 32, 78);
+  font-size: 30px;
+}
+
+h3 {
+  color: rgb(3, 48, 116);
+  font-size: 25px;
+}
+
+fieldset, label {
+  display: inline-flex;
+  text-align: justify;
+}
+
+ul {
+  display: inline-flex;
+  text-align: justify;
+  flex-direction: column;
+}
+
+input {
+  display: grid;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  background: rgb(2, 32, 78);
+  color: #fff;
+}
+
+form textarea {
+  display: flexbox;
+  height: 15rem;
+  width: 75%;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 a:link {
   color: rgb(13, 98, 151);
   text-decoration: none;
@@ -49,7 +94,10 @@ a:active {
 }
 
 li {
-  list-style-type: none
+  list-style-type: none;
+  border: rgb(1, 10, 48) solid 1px;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .Landing {
@@ -59,7 +107,6 @@ li {
   flex-direction: column;
 }
 
-
 .Demo {
   display: inline-flexbox;
   flex: 1;
@@ -67,53 +114,11 @@ li {
   padding: 10px;
 }
 
-.Demo fieldset, label {
-  display: inline-flex;
-  text-align: justify;
-}
-
-.Demo input {
-  display: grid;
-}
-
-.Demo button {
-  margin-top: 10px;
-  display: grid;
-  padding: 10px;
-  border: 0;
-  font-size: 16px;
-  background: rgb(2, 32, 78);
-  color: #fff;
-}
-
 .LoginSignup {
   display: inline-flexbox;
   flex: 1;
   text-align: center;
   padding: 10px;
-}
-
-.LoginSignup fieldset, label {
-  display: inline-flex;
-  text-align: justify;
-}
-
-.LoginSignup input {
-  display: grid;
-}
-
-.LoginSignup button {
-  margin-top: 10px;
-  display: grid;
-  padding: 10px;
-  border: 0;
-  font-size: 16px;
-  background: rgb(2, 32, 78);
-  color: #fff;
-}
-
-.NewMembers label {
-  color: rgb(2, 32, 78);
 }
 
 .NotFound {
@@ -137,19 +142,24 @@ li {
   padding: 10px;
 }
 
-.Registration fieldset, label {
+.ScribeInCalendar {
+  display: inline-flexbox;
+  flex: 1;
+  text-align: center;
+}
+
+.ScribeReviewViewScribble p {
   display: inline-flex;
   text-align: justify;
+  flex-direction: row;
+  margin-left: 15px;
 }
 
-.Registration input {
-  display: grid;
-}
-
-.Registration button {
-  margin-top: 10px;
-  display: grid;
-  padding: 10px;
+.ScribeReviewViewScribblesList button {
+  margin-left: 5px;
+  display: inline-block;
+  align-content: flex-end;
+  padding: 5px;
   border: 0;
   font-size: 16px;
   background: rgb(2, 32, 78);
@@ -175,23 +185,25 @@ li {
   display: inline-flex;
   flex: 2;
   text-decoration: none;
-  padding: 15px;
-  padding-top: 50px;
+  padding: 5px;
+  padding-top: 10px;
 }
 
 .Header h1 {
-  font-size: 60px;
+  font-size: 40px;
   color: white;
 }
 
 header a:link {
   color: white;
   text-decoration: none;
+  font-size: 30px;
 }
 
 header a:visited {
   color: white;
   text-decoration: none;
+  font-size: 30px;
 }
 
 /* Footer */
@@ -202,7 +214,6 @@ footer {
   background-color: rgb(17, 70, 148);
   margin-top: 20px;
   color: white;
-  font-size: 20px;
   padding: 10px;
   justify-content: space-between;
 }
@@ -210,9 +221,45 @@ footer {
 footer a:link {
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }
 
 footer a:visited {
   color: white;
   text-decoration: none;
+  font-size: 20px;
+}
+
+/*Desktops*/
+
+@media all and (min-width: 600px) {
+  form textarea {
+    display: flexbox;
+    height: 15rem;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .Header span {
+    display: inline-flex;
+    flex: 2;
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 50px;
+  }
+  .Header h1 {
+    font-size: 60px;
+    color: white;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(17, 70, 148);
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: space-between;
+  }
 }

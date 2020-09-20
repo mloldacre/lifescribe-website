@@ -17,7 +17,7 @@ export default class Header extends Component {
           <span>Logout</span>
         </Link>
         <Link to='/profile'>
-          <span>My Profile</span>
+          <span>Profile</span>
         </Link>
       </div>
     )

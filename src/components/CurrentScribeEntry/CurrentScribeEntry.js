@@ -64,6 +64,9 @@ export default class CurrentScribeEntry extends Component {
           className="ScribbleEntryForm"
           onSubmit={this.handleSubmit}
         >
+        <fieldset>
+        <legend>Scribbles</legend>
+        
           <article className="TextScribble">
             <textarea
               id="text"
@@ -75,7 +78,7 @@ export default class CurrentScribeEntry extends Component {
           <button type="submit">
             Submit
           </button>
-          <article className="MediaScribbles">
+          {/* <article className="MediaScribbles">
             <textarea
               id="media"
               name="media"
@@ -84,7 +87,8 @@ export default class CurrentScribeEntry extends Component {
           </article>
           <button type="submit">
             Upload
-            </button>
+            </button> */}
+          </fieldset>
         </form>
       </Section>
     )

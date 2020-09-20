@@ -71,9 +71,9 @@ export default class ScribeReviewView extends Component {
 
     return (
       <Section className="ScribeReviewView">
-        <h3>{this.props.match.params.scribeId
+        <h2>{this.props.match.params.scribeId
           ? 'Previous '
-          : 'Current '}Scribe Review Page</h3>
+          : 'Current '}Scribe</h2>
         {error
           ? <p className="error">No scribes to review today</p>
           : this.renderScribe()}
