@@ -3,6 +3,7 @@ import ScribeApiService from '../services/scribe-api-service';
 import ScribeContext from '../contexts/ScribeContext';
 import { Section } from '../components/Utils/Utils'
 import Calendar from '../components/Calendar/Calendar'
+import BackButton from '../components/BackButton/BackButton'
 import '../Style.css'
 
 
@@ -34,6 +35,7 @@ export default class ScribeCalendarView extends Component {
         {error
           ? <p className='error'>There was an error, try again</p>
           : this.renderScribes()}
+        <BackButton/>
       </Section>
     )
   }

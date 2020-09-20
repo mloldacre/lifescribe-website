@@ -3,7 +3,7 @@ import ScribeApiService from '../services/scribe-api-service';
 import ScribeContext from '../contexts/ScribeContext';
 import { Section } from '../components/Utils/Utils'
 import CurrentScribeReview from '../components/CurrentScribeReview/CurrentScribeReview'
-
+import BackButton from '../components/BackButton/BackButton'
 
 
 export default class ScribeReviewView extends Component {
@@ -77,6 +77,7 @@ export default class ScribeReviewView extends Component {
         {error
           ? <p className="error">No scribes to review today</p>
           : this.renderScribe()}
+        <BackButton/>
       </Section>
     );
   }

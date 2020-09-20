@@ -3,6 +3,7 @@ import ScribeApiService from '../../services/scribe-api-service';
 import ScribeContext from '../../contexts/ScribeContext';
 import { Section } from '../Utils/Utils'
 import moment from 'moment-timezone';
+import BackButton from '../BackButton/BackButton'
 import '../../Style.css';
 
 export default class CurrentScribeEntry extends Component {
@@ -90,6 +91,7 @@ export default class CurrentScribeEntry extends Component {
             </button> */}
           </fieldset>
         </form>
+        <BackButton/>
       </Section>
     )
 

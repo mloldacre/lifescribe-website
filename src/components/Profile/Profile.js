@@ -3,6 +3,7 @@ import '../../Style.css';
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import { Link } from 'react-router-dom';
+import BackButton from '../BackButton/BackButton'
 import TokenService from '../../services/token-service';
 
 export default class Profile extends Component {
@@ -51,6 +52,8 @@ export default class Profile extends Component {
               ? <p className='red'>{error}</p>
               : null}
           </div>
+          <fieldset>
+          <legend>Profile</legend>
           <div className='first_name'>
             <label htmlFor='ProfileFormFirstName'>
               First name:
@@ -111,7 +114,9 @@ export default class Profile extends Component {
           <button type='button' onClick={() => this.handleDelete(user.id)}>
             Delete
         </button>
+          </fieldset>
         </form>
+        <BackButton/>
       </div>
 
     );

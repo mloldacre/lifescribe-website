@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthApiService from '../services/auth-api-service'
 import UserContext from '../contexts/UserContext'
+import BackButton from '../components/BackButton/BackButton'
 
 export default class Profile extends Component {
   static defaultProps = {
@@ -57,11 +58,12 @@ export default class Profile extends Component {
     console.log('UserEdit:', user)
     return (
       <div className="Profile">
-        Edit 
+        <h2>My Profile</h2>
         <form
           className='ProfileForm'
           onSubmit={this.handleUpdate}
         >
+        <fieldset><legend>Edit</legend>
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
           </div>
@@ -121,7 +123,9 @@ export default class Profile extends Component {
           <button type='button' onClick={this.handleClickCancel}>
             Cancel
         </button>
+          </fieldset>
         </form>
+        <BackButton/>
       </div>
 
     );
