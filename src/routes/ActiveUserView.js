@@ -13,7 +13,7 @@ export default class ActiveUserView extends Component {
           <p>Current Scribe</p>
       </Link>
         <Link to='/scribbleEntry/'>
-        Enter Scribbles
+          <p>Enter Scribbles</p>
       </Link>
       </main>
     )

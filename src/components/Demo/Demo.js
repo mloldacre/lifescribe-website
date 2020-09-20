@@ -46,7 +46,6 @@ export default class Demo extends Component {
       <form className="Demo"
         onSubmit={this.handleSubmitJwtAuth}
       >
-        Demo Page
         <div role='alert'>
           {error && <p className="error">{error}</p>}
         </div>
