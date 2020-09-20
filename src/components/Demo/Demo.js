@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 import '../../Style.css';
-import { Link } from 'react-router-dom';
 
 export default class Demo extends Component {
   static defaultProps = {
@@ -49,7 +48,7 @@ export default class Demo extends Component {
         <div role='alert'>
           {error && <p className="error">{error}</p>}
         </div>
-        <h1>Greetings!</h1>
+        <h1>Howdy!</h1>
         <p>A demo account has been provided for you with the credentials:</p>
         <p>Username: DemoAccount</p>
         <p>Password: Password123!</p>

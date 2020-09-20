@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Section } from '../components/Utils/Utils'
 import LoginSignup from '../components/LoginSignup/LoginSignup'
 
 export default class Login extends Component {

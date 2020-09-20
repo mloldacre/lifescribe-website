@@ -5,7 +5,9 @@ import '../../Style.css';
 export default function Landing() {
   return (
     <div className="Landing">
-      Subscribe to YOUR life!
+      <Link to='/loginRegister'>
+        <h1>Subscribe to YOUR life!</h1>
+      </Link>
       <Link to='/demo'>
         Try a Scribe!
       </Link>

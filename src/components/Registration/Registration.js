@@ -15,10 +15,10 @@ export default class Registration extends Component {
   }
 
   state = { error: null }
-  
+
   handleSubmit = ev => {
     ev.preventDefault()
-  const { first_name, last_name, email, user_name, password } = ev.target
+    const { first_name, last_name, email, user_name, password } = ev.target
 
     this.setState({ error: null })
     AuthApiService.postUser({
@@ -40,12 +40,11 @@ export default class Registration extends Component {
         this.setState({ error: res.error })
       })
   }
-  
+
   render() {
-    const { error} = this.state
+    const { error } = this.state
     return (
       <div className="Registration">
-        Registration
         <form
           className='RegistrationForm'
           onSubmit={this.handleSubmit}
@@ -53,64 +52,68 @@ export default class Registration extends Component {
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
           </div>
-          <div className='first_name'>
-            <label htmlFor='RegistrationFormFirstName'>
-              First name:
+          <h1>Welcome!</h1>
+          <fieldset>
+          <legend>Registration</legend>
+            <div className='first_name'>
+              <label htmlFor='RegistrationFormFirstName'>
+                First name:
             </label>
-            <input
-              name='first_name'
-              type='text'
-              required
-              id='RegistrationFormFirstName'>
-            </input>
-          </div>
-          <div className='last_name'>
-            <label htmlFor='RegistrationFormLastName'>
-              Last name:
+              <input
+                name='first_name'
+                type='text'
+                required
+                id='RegistrationFormFirstName'>
+              </input>
+            </div>
+            <div className='last_name'>
+              <label htmlFor='RegistrationFormLastName'>
+                Last name:
             </label>
-            <input
-              name='last_name'
-              type='text'
-              required
-              id='RegistrationFormLastName'>
-            </input>
-          </div>
-          <div className='email'>
-            <label htmlFor='RegistrationFormEmail'>
-              Email:
+              <input
+                name='last_name'
+                type='text'
+                required
+                id='RegistrationFormLastName'>
+              </input>
+            </div>
+            <div className='email'>
+              <label htmlFor='RegistrationFormEmail'>
+                Email:
           </label>
-            <input
-              name='email'
-              type='text'
-              required
-              id='RegistrationFormEmail'>
-            </input>
-          </div>
-          <div className='user_name'>
-            <label htmlFor='RegistrationFormUsername'>
-              Username:
+              <input
+                name='email'
+                type='text'
+                required
+                id='RegistrationFormEmail'>
+              </input>
+            </div>
+            <div className='user_name'>
+              <label htmlFor='RegistrationFormUsername'>
+                Username:
           </label>
-            <input
-              name='user_name'
-              type='text'
-              required
-              id='RegistrationFormUsername'>
-            </input>
-          </div>
-          <div className='password'>
-            <label htmlFor='RegistrationFormPassword'>
-              Password:
+              <input
+                name='user_name'
+                type='text'
+                required
+                id='RegistrationFormUsername'>
+              </input>
+            </div>
+            <div className='password'>
+              <label htmlFor='RegistrationFormPassword'>
+                Password:
             </label>
-            <input
-              name='password'
-              type='password'
-              required
-              id='RegistrationFormPassword'>
-            </input>
-          </div>
-          <button type='submit'>
-            Register!
+              <input
+                name='password'
+                type='password'
+                required
+                id='RegistrationFormPassword'>
+              </input>
+            </div>
+            <button type='submit'>
+              Register
         </button>
+          </fieldset>
         </form>
       </div>
     )

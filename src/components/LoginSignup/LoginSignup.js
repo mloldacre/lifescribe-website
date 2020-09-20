@@ -37,7 +37,6 @@ export default class LoginSignup extends Component {
       <form className="LoginSignup"
       onSubmit={this.handleSubmitJwtAuth}
       >
-        Login Registration Page
         <div role='alert'>
           {error && <p className="error">{error}</p>}
         </div>
@@ -56,7 +55,7 @@ export default class LoginSignup extends Component {
           </div>
           <div className="password">
             <label htmlFor="LoginPassword">
-              Password:
+              Password: <br></br> 
         </label>
             <input
               required
@@ -66,10 +65,9 @@ export default class LoginSignup extends Component {
             </input>
           </div>
           <button type="submit">Login</button>
-          <label htmlFor="LoginRegistration">New Members</label>
           <Link to="/registration" >
-          Sign-up!
-          </Link>
+              <button type='button'>Sign-up!</button>
+          </Link>          
         </fieldset>
       </form>
     );
