@@ -259,24 +259,24 @@ a:active {
   flex: 2;
   text-decoration: none;
   padding: 5px;
-  padding-top: 10px;
+  padding-top: 35px;
 }
 
 .Header h1 {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
 }
 
 header a:link {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 header a:visited {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /* Footer */
