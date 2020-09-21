@@ -170,7 +170,6 @@ a:active {
   flex-direction: column;
 }
 
-
 .Demo {
   display: inline-flexbox;
   flex: 1;
@@ -184,6 +183,7 @@ a:active {
   text-align: center;
   flex-direction: column;
 }
+
 .LoginSignup {
   display: inline-flexbox;
   flex: 1;
@@ -223,6 +223,7 @@ a:active {
   text-align: left;
   word-wrap: break-word;
   flex-direction: row;
+  padding-right: 15px;
   margin-left: 15px;
 }
 
@@ -334,6 +335,16 @@ footer a:visited {
   .Header h1 {
     font-size: 60px;
     color: white;
+  }
+  header a:link {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+  }
+  header a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
   }
   footer {
     display: flex;
