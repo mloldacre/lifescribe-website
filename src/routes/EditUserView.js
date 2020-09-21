@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AuthApiService from '../services/auth-api-service'
-import UserContext from '../contexts/UserContext'
-import BackButton from '../components/BackButton/BackButton'
+import AuthApiService from '../services/auth-api-service';
+import UserContext from '../contexts/UserContext';
+import BackButton from '../components/BackButton/BackButton';
 
 export default class Profile extends Component {
   static defaultProps = {

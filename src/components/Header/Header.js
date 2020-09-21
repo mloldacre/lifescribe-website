@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Style.css'
+import '../../Style.css';
 import TokenService from '../../services/token-service';
 
 export default class Header extends Component {

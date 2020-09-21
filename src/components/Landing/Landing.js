@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../Style.css';
-import Logo from '../../images/1515806.png'
+import Logo from '../../images/1515806.png';
 
 export default function Landing() {
   return (
