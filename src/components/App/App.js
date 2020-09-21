@@ -29,9 +29,9 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path='/' component={Landing} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
           <PublicRoute path='/loginRegister' component={Login} />
-          <PublicRoute path='/contact' component={Contact} />
-          <PublicRoute path='/about' component={About} />
           <PublicRoute path='/demo' component={Demo} />
           <PublicRoute path='/registration' component={Registration} />
           <PrivateRoute path='/loggedIn' component={ActiveUserView}/>

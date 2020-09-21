@@ -33,6 +33,10 @@ fieldset, label {
   text-align: justify;
 }
 
+input {
+  display: grid;
+}
+
 ul {
   display: flex;
   text-align: justify;
@@ -45,10 +49,6 @@ li {
   border: rgb(1, 10, 48) solid 2px;
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-input {
-  display: grid;
 }
 
 button {
@@ -101,7 +101,29 @@ a:active {
   text-align: center;
 }
 
+.About {
+  display: grid;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.About article {
+  max-width: 320px;
+  text-align: justify;
+}
+
 .BackButton {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  background: rgb(2, 32, 78);
+  color: #fff;
   position: relative;
   bottom: auto;
 }
@@ -128,6 +150,18 @@ a:active {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
+}
+
+.Contact {
+  display: inline-flex;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.Contact article {
+  flex-direction: column;
 }
 
 .Landing {

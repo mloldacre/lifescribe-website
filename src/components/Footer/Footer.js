@@ -8,10 +8,10 @@ export default function Footer() {
   return (
     <footer className="Footer">
       <Link to='/about'>
-        <About />
+        About
       </Link>
       <Link to='/contact'>
-        <Contact />
+        Contact
       </Link>
     </footer>
   );
