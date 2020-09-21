@@ -73,6 +73,7 @@ export default class Profile extends Component {
             </label>
             <input
               name='first_name'
+              defaultValue={user.first_name}
               type='text'
               id='ProfileFormFirstName'>
             </input>
@@ -83,6 +84,7 @@ export default class Profile extends Component {
             </label>
             <input
               name='last_name'
+                defaultValue={user.last_name}
               type='text'
               id='ProfileFormLastName'>
             </input>
@@ -93,6 +95,7 @@ export default class Profile extends Component {
           </label>
             <input
               name='email'
+                defaultValue={user.email}
               type='text'
               id='ProfileFormEmail'>
             </input>

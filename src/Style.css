@@ -71,6 +71,12 @@ form textarea {
   margin-bottom: 20px;
 }
 
+img {
+  max-width: 300px;
+  align-self: center;
+  margin-top: 10px;
+}
+
 a:link {
   color: rgb(13, 98, 151);
   text-decoration: none;
@@ -164,12 +170,6 @@ a:active {
   flex-direction: column;
 }
 
-.Landing {
-  display: flex;
-  flex: 1;
-  text-align: center;
-  flex-direction: column;
-}
 
 .Demo {
   display: inline-flexbox;
@@ -178,6 +178,12 @@ a:active {
   padding: 10px;
 }
 
+.Landing {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  flex-direction: column;
+}
 .LoginSignup {
   display: inline-flexbox;
   flex: 1;
@@ -262,13 +268,13 @@ a:active {
 header a:link {
   color: white;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 header a:visited {
   color: white;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /* Footer */
