@@ -5,12 +5,18 @@ import TokenService from '../../services/token-service';
 
 export default function BackButton() {
   return (
-    
-    <button className='BackButton' type='button'>
-    {TokenService.hasAuthToken()
-        ? <Link to='/loggedIn'>Back</Link>
-        : <Link to='/'>Back</Link>}
-    </button>
-    
+    <div>
+      {TokenService.hasAuthToken()
+        ? <Link to='/loggedIn'>
+          <button className='BackButton' type='button'>
+            Back
+        </button>
+        </Link>
+        : <Link to='/'>
+          <button className='BackButton' type='button'>
+            Back
+        </button>
+        </Link>}
+    </div>
   );
 }
