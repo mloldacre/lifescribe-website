@@ -101,7 +101,21 @@ export default class Profile extends Component {
                 id='email'>
               </input>
             </div>
-            {/* <div className='user_name'>
+            <button type='submit'>
+              Edit
+          </button>
+            <button type='button' onClick={this.handleClickCancel}>
+              Cancel
+        </button>
+          </fieldset>
+        </form>
+        <BackButton />
+      </div>
+    );
+  }
+}
+
+{/* <div className='user_name'>
             <label htmlFor='ProfileFormUsername'>
               Username
           </label>
@@ -121,17 +135,3 @@ export default class Profile extends Component {
               id='ProfileFormPassword'>
             </input>
           </div> */}
-            <button type='submit'>
-              Edit
-          </button>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
-        </button>
-          </fieldset>
-        </form>
-        <BackButton />
-      </div>
-    );
-  }
-}
-
