@@ -5,7 +5,22 @@ import '../../Style.css';
 export default function About() {
   return (
     <div className="About">
-      <div><article>I want to develop a journal web application that allows a user to log in and either create an entry for the current day or look back at their previous entries. When making an entry for the current day, the user can enter text for their thoughts, upload pictures, audio files, and video files. Each entry is called a scribe, and the events within a scribe are timestamped. When looking back at previous scribes, the events are listed in order by time so the user can see how their day went. Potential for sharing to friends in future versions.</article></div>
+      <div><article>
+        <h3>A Little About Me:</h3>
+        <p>I graduated from Miami Dade College with an A.A in Computer Science, an A.S in Mobile Application
+        Development,
+        and a B.S in Information Systems Technology. I gained a moderate comprehension of various programming
+        languages
+        including Visual Basic, C++, Java, PHP, and SQL. Due to circumstances stemming from the Covid-19 pandemic, I
+        saw
+          an opportunity to increase my programming and development skill level as much as possible. </p>
+
+        <p>While not learning about web development I enjoy photography, photo editing, archery, biking, and video
+          games.</p>
+
+        <p>Looking forward to learning as much as possible about web development through the Thinkful Engineering
+          Immersion Program so I can provide full stack services!</p>
+      </article></div>
       <BackButton/>
     </div>
   );

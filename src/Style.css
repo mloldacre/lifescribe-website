@@ -1,10 +1,11 @@
 /* Main Section */
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 main {
   display: flex;
   flex: 1;
   text-align: center;
   flex-direction: column;
+  font-family: 'Architects Daughter', cursive;
 }
 
 Section {
@@ -55,6 +56,7 @@ button {
   font-size: 16px;
   background: rgb(2, 32, 78);
   color: #fff;
+  font-family: 'Architects Daughter', cursive;
 }
 
 form textarea {
@@ -113,7 +115,11 @@ a:active {
 
 .About article {
   max-width: 320px;
-  text-align: justify;
+  text-align: start;
+}
+
+.About p {
+  text-indent: 30px;
 }
 
 .BackButton {
@@ -245,6 +251,7 @@ a:active {
   display: flex;
   flex-direction: row;
   background-color: rgb(32, 115, 240);
+  font-family: 'Architects Daughter', cursive;
 }
 
 .Header nav {
@@ -289,6 +296,7 @@ footer {
   color: white;
   padding: 10px;
   justify-content: space-between;
+  font-family: 'Architects Daughter', cursive;
 }
 
 footer a:link {
