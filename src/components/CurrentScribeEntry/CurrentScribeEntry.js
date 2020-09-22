@@ -65,21 +65,48 @@ export default class CurrentScribeEntry extends Component {
           className="ScribbleEntryForm"
           onSubmit={this.handleSubmit}
         >
-        <fieldset>
-        <legend>Scribbles</legend>
-        
-          <article className="TextScribble">
-            <textarea
-              id="text"
-              name="text"
-              placeholder={scribble && scribble.scribble_content ? scribble.scribble_content : 'Enter a text scribble!'}
-              defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
-            </textarea>
-          </article>
-          <button type="submit">
-            Submit
+          <fieldset>
+            <legend>Scribbles</legend>
+            <article className="TextScribble">
+              <textarea
+                id="text"
+                name="text"
+                placeholder={scribble && scribble.scribble_content ? scribble.scribble_content : 'Enter a text scribble!'}
+                defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
+              </textarea>
+            </article>
+            <button type="submit">
+              Submit
           </button>
-          {/* <article className="MediaScribbles">
+          </fieldset>
+        </form>
+        <BackButton />
+      </Section>
+    )
+  }
+}
+
+//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
+
+//TODO Decide what to render and where to navigate after submission
+// render() {
+//   const { error } = this.context
+//   return (
+//     <h1 className="CurrentScribeEntry">
+//       <button type="submit">
+//         Previous Scribes
+//     </button>
+//       Current Scribe Entry Page
+//       {error
+//         ? <p className="error">There was an error on the Scribe Entry Page</p>
+//         : this.renderEntryView()}
+//       <button type="submit">
+//         Review Scribe
+//     </button>
+//     </h1>
+//   );
+// }
+{/* <article className="MediaScribbles">
             <textarea
               id="media"
               name="media"
@@ -89,33 +116,3 @@ export default class CurrentScribeEntry extends Component {
           <button type="submit">
             Upload
             </button> */}
-          </fieldset>
-        </form>
-        <BackButton/>
-      </Section>
-    )
-
-  }
-
-  //{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
-
-  //TODO Decide what to render and where to navigate after submission
-  // render() {
-  //   const { error } = this.context
-  //   return (
-  //     <h1 className="CurrentScribeEntry">
-  //       <button type="submit">
-  //         Previous Scribes
-  //     </button>
-  //       Current Scribe Entry Page
-  //       {error
-  //         ? <p className="error">There was an error on the Scribe Entry Page</p>
-  //         : this.renderEntryView()}
-  //       <button type="submit">
-  //         Review Scribe
-  //     </button>
-  //     </h1>
-  //   );
-  // }
-}
-
