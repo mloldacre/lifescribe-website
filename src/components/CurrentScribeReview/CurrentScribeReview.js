@@ -7,7 +7,6 @@ import moment from 'moment-timezone';
 export default class CurrentScribeReview extends Component {
 
   static contextType = ScribeContext
-//TODO fix time displayed
   renderScribeScribbles = ( scribbles = [] ) => {
     const { onDelete, } = this.props 
     if (!scribbles.length) {return null}
@@ -16,7 +15,7 @@ export default class CurrentScribeReview extends Component {
         {scribbles.map(scribble =>
           <li key={scribble.id} className='ScribeReviewViewScribble'>
           <span></span>
-            <p>{moment(scribble.time_created).tz('America/New_York').format('hh:mm:ss a')}</p>
+            <p>{moment(scribble.time_created).format('hh:mm:ss a')}</p>
             <p>{scribble.scribble_content}</p>
             <div><Link to={`/scribbleEntry/${scribble.id}`}><button
               className='Scribble__edit'
@@ -41,7 +40,7 @@ export default class CurrentScribeReview extends Component {
     console.log("CSR: ScribeId",scribeId)
     return (
       <div className="CurrentScribeReview">
-        <h3>{moment(date).tz('America/New_York').format('MM/DD/YYYY')}</h3>
+        <h3>{moment(date).format('MM/DD/YYYY')}</h3>
         {this.renderScribeScribbles(scribbles)}
       </div>
     );
@@ -49,8 +48,7 @@ export default class CurrentScribeReview extends Component {
 
 }
 
-//TODO Get scribble ID passed from this function to delete action above ^
+
 
 //{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
 
-//
