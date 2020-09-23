@@ -1,4 +1,5 @@
 /* Main Section */
+
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 main {
   display: flex;
@@ -228,10 +229,12 @@ a:active {
 .ScribeReviewViewScribble p {
   display: inline-flex;
   text-align: left;
-  word-wrap: break-word;
+  word-break: break-all;
   flex-direction: row;
+  max-width: 100vw;
   padding-right: 15px;
   margin-left: 15px;
+  
 }
 
 .ScribeReviewViewScribblesList button {
@@ -372,7 +375,10 @@ footer a:visited {
   .ScribeReviewViewScribble p {
     display: inline-flex;
     text-align: left;
+    word-break: break-all;
     flex-direction: row;
+    max-width: 25vw;
+    padding-right: 15px;
     margin-left: 15px;
   }
   .ScribeReviewViewScribblesList button {
