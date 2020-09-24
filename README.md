@@ -1,68 +1,176 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LifeScribe
 
-## Available Scripts
+## What is LifeScribe?
 
-In the project directory, you can run:
+LifeScribe is an online web journal application in which users are able to log in and enter their thoughts (scribbles) and review them by day and time entered!
 
-### `npm start`
+## Prerequisites
+Lifescribe requires Node.js 12.18+ to run.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing
+Lifescribe requires Node.js 12.18+ to run. Install the dependencies and devDependencies then start the server.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    npm install
 
-### `npm test`
+## Running The Tests
+To run front-end or back-end tests, simply run `npm t` in the terminal.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Schema
+	
 
-### `npm run build`
+### User
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    {
+	    id: {
+		    type: Integer,
+		    required: true,
+		    unique: true
+		    },
+		first_name: {
+		    type: Text,
+		    required: true,
+		    unique: false
+		    },
+		last_name: {
+		    type: Text,
+		    required: true,
+		    unique: false
+		    },
+		 username: {
+		    type: Text,
+		    required: true,
+		    unique: true
+		    },
+		 password: {
+		    type: Text,
+		    required: true,
+		    unique: false
+		    },
+		 email: {
+		    type: Text,
+		    required: true,
+		    unique: true
+		    },
+		 date_created: {
+		    type: TimestampTZ,
+		    required: true,
+		    unique: false,
+		    default: TimestampTZ.now
+		    },
+		 date_modified: {
+		    type: TimestampTZ,
+		    required: false,
+		    unique: false
+		    },
+    }
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Scribe
+	{
+		id: {
+		    type: Integer,
+		    required: true,
+		    unique: true
+		    },
+		date_created: {
+		    type: Date,
+		    required: true,
+		    unique: false,
+		    default: Date.now
+		    },
+		user_id: {
+			 type: id,
+			 ref: User
+		 }
+	}
+ 
+ ### Scribble
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+     {
+    	id: {
+		    type: Integer,
+    		required: true,
+    		unique: true
+    		},
+    	date_created: {
+		    type: Date,
+		    required: true,
+		    unique: false,
+		    default: Date.now
+		    },
+		time_created: {
+		    type: TimestampTZ,
+		    required: true,
+		    unique: true,
+		    default: TimestampTZ.now
+		    },
+		 scribble_type: {
+		    type: Integer,
+    		required: true,
+    		unique: false
+    		},
+    	scribble_content: {
+		    type: Text,
+    		required: true,
+    		unique: false
+    		},
+    	scribe_id: {
+			 type: id,
+			 ref: Scribe
+		 },
+		 user_id: {
+			 type: id,
+			 ref: User
+		 }
+    }
 
-### `npm run eject`
+## API Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    /api
+    .
+    |__/auth
+	|    |__POST
+	|	    |__/login
+	|
+	|__/users
+	|	|__GET
+	|	|__POST
+	|	|__PATCH
+	|	|__DELETE
+	|		|__/
+	|
+	|__/scribes
+	|	|__GET
+	|	|__GET /scribbles
+	|	|__GET /currentScribe
+	|	|__POST
+	|		|__/
+	|
+	|__/scribbles
+		|__GET
+		|__GET /for_scribe/:scribe_id
+		|__GET 
+		|__PATCH
+		|__DELETE
+			|__ /:scribble_id
+		|__POST
+			|__ /
+### POST `/api/auth/login`		
+### GET  `/api/users`	
+### POST `/api/users`	
+### GET `/api/scribes`	
+### GET `/api/scribes/scribbles`	
+### GET `/api/scribes/currentScribbles`
+### POST `/api/scribes`
+### GET `/api/scribbles`
+### GET`/api/scribbles/for_scribe/:scribe_id`
+### GET`/api/scribbles/:scribble_id`
+### PATCH`/api/scribbles/:scribble_id`
+### DELETE`/api/scribbles/:scribble_id`
+### POST`/api/scribbles/`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> Written with [StackEdit](https://stackedit.io/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTYyNjM1MTE0Nl19
+-->
