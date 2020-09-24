@@ -30,7 +30,7 @@ export default class CurrentScribeEntry extends Component {
     this.context.clearScribe()
   }
 
-  handleSubmit = ev => {
+  onHandleSubmit = ev => {
     ev.preventDefault()
     //look for params like at the top, if they exist, do API call to edit(PATCH)
     //endpoint
@@ -60,10 +60,10 @@ export default class CurrentScribeEntry extends Component {
     return (
       <Section className="ScribeEntryView">
         <h2>Your Thoughts</h2>
-        {moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY')}
+        {moment(scribe.date_created).format('MM/DD/YYYY')}
         <form
           className="ScribbleEntryForm"
-          onSubmit={this.handleSubmit}
+          onSubmit={this.onHandleSubmit}
         >
           <fieldset>
             <legend>Scribbles</legend>
