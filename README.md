@@ -180,7 +180,11 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
     }
     //res.body
     {
-	    
+	    id: 
+	    first_name: String
+	    last_name: String
+	    email: String
+	    user_name: String
     }
         
 
@@ -201,6 +205,6 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxMjI3ODQyLDE5MTM1NDQzMiwtNjI2Mz
+eyJoaXN0b3J5IjpbNTczMDEwNjAyLDE5MTM1NDQzMiwtNjI2Mz
 UxMTQ2XX0=
 -->
