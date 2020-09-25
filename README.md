@@ -154,7 +154,14 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 			|__ /:scribble_id
 		|__POST
 			|__ /
-### POST `/api/auth/login`		
+### POST `/api/auth/login`	
+
+    //req.body
+    {
+    user_name: String
+    password: String
+    }	
+
 ### GET  `/api/users`	
 ### POST `/api/users`	
 ### GET `/api/scribes`	
@@ -172,5 +179,5 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNjM1MTE0Nl19
+eyJoaXN0b3J5IjpbMTQzNjUyOTUxNCwtNjI2MzUxMTQ2XX0=
 -->
