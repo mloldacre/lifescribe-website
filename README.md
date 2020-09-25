@@ -1,7 +1,3 @@
-<hr>
-<hr>
-<hr>
-<hr>
 <h1 id="lifescribe">LifeScribe</h1>
 <h2 id="what-is-lifescribe">What is LifeScribe?</h2>
 <p>LifeScribe is an online web journal application in which users are able to log in and enter their thoughts (scribbles) and review them by day and time entered!</p>
@@ -395,5 +391,5 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMxNzk0NjYxXX0=
+eyJoaXN0b3J5IjpbMjc3OTkxMTgxXX0=
 -->
