@@ -365,20 +365,15 @@
 React<br>
 Node<br>
 Express<br>
-JWT<br>
 JWT
-Mocha<br>
-Chai<br>
-Enzyme</p>
-<h2 id="authors">Authors</h2>
-<p>Michael Oldacre - Full Stack</p>
-<h2 id="acknowledgments">
-</h2><h2 id="authors">Authors</h2>
-<p>Michael Oldacre - Full Stack</p>
-<h2 id="acknowledgmentsh2">
+JWT
+Mocha
+Chai
+Enzyme
+
 ## Authors
 Michael Oldacre - Full Stack
-</h2><h2 id="acknowledgmentsh2">
+
 ## Acknowledgments</h2>
 <p>
 A great many thanks goes to Mark Lewis for all the help!</p>
@@ -390,5 +385,5 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTE1MjUwNjhdfQ==
+eyJoaXN0b3J5IjpbLTEwNzkxOTk5ODFdfQ==
 -->
