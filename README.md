@@ -366,20 +366,34 @@
     scribe_id: Integer
     user_id: Integer
 }
-</code></pre><h2 id="built-with">Built With</h2>
-<p>React<br>
+code></p><h2 id="built-with">
+## Built With</h2>
+<p>
+React<br>
 Node<br>
 Express<br>
 JWT<br>
+JWT
 Mocha<br>
 Chai<br>
 Enzyme</p>
 <h2 id="authors">Authors</h2>
 <p>Michael Oldacre - Full Stack</p>
-<h2 id="acknowledgments">Acknowledgments</h2>
-<p>A great many thanks goes to Mark Lewis for all the help!</p>
-<p></p>
+<h2 id="acknowledgments">
+
+## Authors
+Michael Oldacre - Full Stack
+
+## Acknowledgments</h2>
+<p>
+A great many thanks goes to Mark Lewis for all the help!</p>
+<p
+
+</code></pre>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY3MTAwMjAwXX0=
+-->
