@@ -373,9 +373,7 @@ JWT<br>
 Mocha<br>
 Chai<br>
 Enzyme<br>
-</p><h2 id="authors">Authors</h2>
-<p>Michael Oldacre - Full Stack</p>
-<h2 id="acknowledgmentsh2">
+
 ## Authors
 Michael Oldacre - Full Stack
 
@@ -388,5 +386,5 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTgzNjk0Nl19
+eyJoaXN0b3J5IjpbNTg4NzY3Nzg4XX0=
 -->
