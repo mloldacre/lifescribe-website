@@ -369,11 +369,10 @@
 React<br>
 Node<br>
 Express<br>
-JWT
-JWT
-Mocha
-
-Enz
+JWT<br>
+Mocha<br>
+Chai<br>
+Enzyme<br>
 </p><h2 id="authors">Authors</h2>
 <p>Michael Oldacre - Full Stack</p>
 <h2 id="acknowledgmentsh2">
@@ -389,5 +388,5 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY1OTMxOTldfQ==
+eyJoaXN0b3J5IjpbMjA2OTgzNjk0Nl19
 -->
