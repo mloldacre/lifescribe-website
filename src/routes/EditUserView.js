@@ -33,7 +33,6 @@ export default class Profile extends Component {
     ev.preventDefault()
     this.setState({ error: null })
     const { first_name, last_name, email } = ev.target
-    let fn = first_name.value
 
     const updatedUser = {
       first_name: first_name.value,
@@ -115,23 +114,23 @@ export default class Profile extends Component {
   }
 }
 
-{/* <div className='user_name'>
-            <label htmlFor='ProfileFormUsername'>
-              Username
-          </label>
-            <input
-              name='user_name'
-              type='text'
-              id='ProfileFormUsername'>
-            </input>
-          </div>
-          <div className='password'>
-            <label htmlFor='ProfileFormPassword'>
-              Password
-            </label>
-            <input
-              name='password'
-              type='password'
-              id='ProfileFormPassword'>
-            </input>
-          </div> */}
+// {/* <div className='user_name'>
+//             <label htmlFor='ProfileFormUsername'>
+//               Username
+//           </label>
+//             <input
+//               name='user_name'
+//               type='text'
+//               id='ProfileFormUsername'>
+//             </input>
+//           </div>
+//           <div className='password'>
+//             <label htmlFor='ProfileFormPassword'>
+//               Password
+//             </label>
+//             <input
+//               name='password'
+//               type='password'
+//               id='ProfileFormPassword'>
+//             </input>
+//           </div> */}

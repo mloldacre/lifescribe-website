@@ -106,13 +106,13 @@ export default class CurrentScribeEntry extends Component {
 //     </h1>
 //   );
 // }
-{/* <article className="MediaScribbles">
-            <textarea
-              id="media"
-              name="media"
-              placeholder="Upload a video, pic, or audio scribble!">
-            </textarea>
-          </article>
-          <button type="submit">
-            Upload
-            </button> */}
+// {/* <article className="MediaScribbles">
+//             <textarea
+//               id="media"
+//               name="media"
+//               placeholder="Upload a video, pic, or audio scribble!">
+//             </textarea>
+//           </article>
+//           <button type="submit">
+//             Upload
+//             </button> */}
