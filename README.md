@@ -245,8 +245,34 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 	    scribble_content: String
 	    scribe_id: Integer
     }
-### GET `/api/scribes/scribbles/`	
+### GET `/api/scribes/scribbles/`
+         //req.body
+    { 
+        user_id: Integer
+    }
+          //res.body
+    {
+    	id: Integer
+	    date_created: Date
+	    time_created: TimestampTZ
+	    scribble_type: Integer
+	    scribble_content: String
+	    scribe_id: Integer
+    }	
 ### GET `/api/scribes/currentScribbles/`
+         //req.body
+    { 
+        user_id: Integer
+    }
+          //res.body
+    {
+    	id: Integer
+	    date_created: Date
+	    time_created: TimestampTZ
+	    scribble_type: Integer
+	    scribble_content: String
+	    scribe_id: Integer
+    }
 ### POST `/api/scribes/`
          //req.body
     { 
@@ -273,6 +299,6 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDkxMDk4MywxOTEzNTQ0MzIsLTYyNj
+eyJoaXN0b3J5IjpbLTM2NzY4NzkyOSwxOTEzNTQ0MzIsLTYyNj
 M1MTE0Nl19
 -->
