@@ -359,8 +359,7 @@
     scribe_id: Integer
     user_id: Integer
 }
-</code></pre><h2 id="built-with">
-</h2><h2 id="built-withh2">
+
 ## Built With</h2>
 <p>
 React<br>
@@ -391,5 +390,5 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc3OTkxMTgxXX0=
+eyJoaXN0b3J5IjpbLTEwOTE1MjUwNjhdfQ==
 -->
