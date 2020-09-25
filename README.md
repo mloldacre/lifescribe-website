@@ -372,11 +372,15 @@ Express<br>
 JWT
 JWT
 Mocha
-Chai
-Enzyme
+
+Enz
 </p><h2 id="authors">Authors</h2>
 <p>Michael Oldacre - Full Stack</p>
-<h2 id="acknowledgmentsh2">Acknowledgments</h2>
+<h2 id="acknowledgmentsh2">
+## Authors
+Michael Oldacre - Full Stack
+
+## Acknowledgments</h2>
 <p>
 A great many thanks goes to Mark Lewis for all the help!</p>
 <p></p>
@@ -384,3 +388,6 @@ A great many thanks goes to Mark Lewis for all the help!</p>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNzY1OTMxOTldfQ==
+-->
