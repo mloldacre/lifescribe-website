@@ -154,7 +154,7 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 			|__ /:scribble_id
 		|__POST
 			|__ /
-### POST `/api/auth/login`	
+### POST `/api/auth/login/`	
 
     //req.body
     {
@@ -167,8 +167,23 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
     }
     
 
-### GET  `/api/users`	
-### POST `/api/users`
+### GET  `/api/users/`	
+
+    //req.body
+        {
+    	    user_name: String
+    	    password: String
+        }
+        // res.body
+        {
+    	   id: Integer
+    	    first_name: String
+    	    last_name: String
+    	    email: String
+    	    user_name: String
+        }
+    
+### POST `/api/users/`
 
     //req.body
     { 
@@ -180,7 +195,7 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
     }
     //res.body
     {
-	    id: 
+	    id: Integer
 	    first_name: String
 	    last_name: String
 	    email: String
@@ -188,13 +203,65 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
     }
         
 
-### PATCH `/api/users`
-### DELETE `/api/users`	
-### GET `/api/scribes`	
-### GET `/api/scribes/scribbles`	
-### GET `/api/scribes/currentScribbles`
-### POST `/api/scribes`
-### GET `/api/scribbles`
+### PATCH `/api/users/`
+ 
+
+     //req.body
+    { 
+        first_name: String
+        last_name: String
+        email: String
+        password: String
+        user_name: String
+    }
+    //res.body
+    {
+        status: 204
+    }
+
+### DELETE `/api/users/`	
+
+         //req.body
+    { 
+        id: Integer
+    }
+          //res.body
+    {
+    	 status: 204
+    }
+
+### GET `/api/scribes/`	
+         //req.body
+    { 
+        id: Integer
+        user_id: Integer
+    }
+          //res.body
+    {
+    	id: Integer
+	    date_created: Date
+	    time_created: TimestampTZ
+	    scribble_type: Integer
+	    scribble_content: String
+	    scribe_id: Integer
+    }
+### GET `/api/scribes/scribbles/`	
+### GET `/api/scribes/currentScribbles/`
+### POST `/api/scribes/`
+         //req.body
+    { 
+        user_id: Integer
+    }
+          //res.body
+    {
+    	id: Integer
+	    date_created: Date
+	    time_created: TimestampTZ
+	    scribble_type: Integer
+	    scribble_content: String
+	    scribe_id: Integer
+    }
+### GET `/api/scribbles/`
 ### GET`/api/scribbles/for_scribe/:scribe_id`
 ### GET`/api/scribbles/:scribble_id`
 ### PATCH`/api/scribbles/:scribble_id`
@@ -204,7 +271,8 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 
 
 > Written with [StackEdit](https://stackedit.io/).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMDEwNjAyLDE5MTM1NDQzMiwtNjI2Mz
-UxMTQ2XX0=
+eyJoaXN0b3J5IjpbLTg4NDkxMDk4MywxOTEzNTQ0MzIsLTYyNj
+M1MTE0Nl19
 -->
