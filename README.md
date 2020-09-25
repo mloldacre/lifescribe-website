@@ -1,3 +1,8 @@
+---
+
+
+---
+
 <hr>
 <hr>
 <hr>
@@ -364,8 +369,7 @@
     user_id: Integer
 }
 </code></pre><h2 id="built-with">
-
-## Built With</h2>
+</h2><h2 id="built-withh2">Built With</h2>
 <p>
 React<br>
 Node<br>
@@ -383,17 +387,11 @@ Enzyme</p>
 <h2 id="acknowledgmentsh2">
 ## Authors
 Michael Oldacre - Full Stack
-
-## Acknowledgments</h2>
+</h2><h2 id="acknowledgmentsh2">Acknowledgments</h2>
 <p>
 A great many thanks goes to Mark Lewis for all the help!</p>
-<p
-
-</code></pre>
+<p></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg1MDk0ODU0XX0=
--->
