@@ -333,6 +333,14 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 	    user_id: Integer
     }
 ### PATCH`/api/scribbles/:scribble_id`
+         //req.body
+    { 
+        scribble_content: String
+    }
+          //res.body
+    {
+    	 status: 204
+    }
 ### DELETE`/api/scribbles/:scribble_id`
 ### POST`/api/scribbles/`
 
@@ -341,6 +349,6 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTUxOTQ4NDgsLTM2NzY4NzkyOSwxOT
+eyJoaXN0b3J5IjpbLTIxMTYyNTM1NDksLTM2NzY4NzkyOSwxOT
 EzNTQ0MzIsLTYyNjM1MTE0Nl19
 -->
