@@ -158,9 +158,14 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 
     //req.body
     {
-    user_name: String
-    password: String
-    }	
+	    user_name: String
+	    password: String
+    }
+    // res.body
+    {
+	    authToken: {$token}
+    }
+    
 
 ### GET  `/api/users`	
 ### POST `/api/users`	
@@ -179,5 +184,5 @@ To run front-end or back-end tests, simply run `npm t` in the terminal.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNjUyOTUxNCwtNjI2MzUxMTQ2XX0=
+eyJoaXN0b3J5IjpbMTkxMzU0NDMyLC02MjYzNTExNDZdfQ==
 -->
