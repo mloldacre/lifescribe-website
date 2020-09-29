@@ -15,13 +15,11 @@
 
 <h2 id="screenshots">Screenshots</h2>
 <img alt="Big Screen Landing Page" src="src/images/LandingF.png">
-![Big Screen:]()
-![Big Screen:]()
-![Big Screen:]()
-![Small Screen:]()
-![Small Screen:]()
-![Small Screen:]()
-![Small Screen:]()
+<img alt="Big Screen Main Page" src="src/images/MainF.png">
+<img alt="Big Screen Calendar Page" src="src/images/PreviousF.png">
+<img alt="Big Screen Scribbles Page" src="src/images/ScribblesF.png">
+<img alt="Big Screen Scribble Entry Page" src="src/images/ScribEntryF.png">
+
 <h2 id="built-withh2">Built With</h2>
 <p>
 React<br>
