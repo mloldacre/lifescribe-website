@@ -61,7 +61,6 @@ button {
 }
 
 form textarea {
-  display: flexbox;
   height: 15rem;
   width: 75%;
   color: #000;
@@ -173,7 +172,6 @@ a:active {
 }
 
 .Demo {
-  display: inline-flexbox;
   flex: 1;
   text-align: center;
   padding: 10px;
@@ -193,7 +191,6 @@ a:active {
 }
 
 .LoginSignup {
-  display: inline-flexbox;
   flex: 1;
   text-align: center;
   padding: 10px;
@@ -234,18 +231,24 @@ a:active {
   max-width: 100vw;
   padding-right: 15px;
   margin-left: 15px;
-  
+}
+
+.ScribeReviewView li {
+  max-width: 90%;
 }
 
 .ScribeReviewViewScribblesList button {
   margin-left: 5px;
-  display: inline-flexbox;
-  align-content: center;
-  padding: 5px;
+  align-content: flex-end;
+  padding: 10px;
   border: 0;
   font-size: 16px;
   background: rgb(2, 32, 78);
   color: #fff;
+}
+
+.ScribbleEntryForm article, label {
+  max-width: 100%;
 }
 
 /* Header */
@@ -337,6 +340,29 @@ footer a:visited {
     font-size: 16px;
     margin-bottom: 20px;
   }
+  .ScribbleEntryForm textarea {
+    max-width: 30%;
+    align-content: center;
+  }
+  .ScribeReviewViewScribble p {
+    display: inline-flex;
+    text-align: left;
+    word-break: break-all;
+    flex-direction: row;
+    max-width: 25vw;
+    padding-right: 15px;
+    margin-left: 15px;
+  }
+  .ScribeReviewViewScribblesList button {
+    margin-left: 5px;
+    align-content: center;
+    padding: 5px;
+    border: 0;
+    font-size: 16px;
+    background: rgb(2, 32, 78);
+    color: #fff;
+  }
+  /*Header*/
   .Header span {
     display: inline-flex;
     flex: 2;
@@ -358,6 +384,7 @@ footer a:visited {
     text-decoration: none;
     font-size: xx-large;
   }
+  /*Footer*/
   footer {
     display: flex;
     flex-direction: row;
@@ -371,24 +398,5 @@ footer a:visited {
   }
   footer a:visited {
     font-size: xx-large;
-  }
-  .ScribeReviewViewScribble p {
-    display: inline-flex;
-    text-align: left;
-    word-break: break-all;
-    flex-direction: row;
-    max-width: 25vw;
-    padding-right: 15px;
-    margin-left: 15px;
-  }
-  .ScribeReviewViewScribblesList button {
-    margin-left: 5px;
-    display: inline-flexbox;
-    align-content: center;
-    padding: 5px;
-    border: 0;
-    font-size: 16px;
-    background: rgb(2, 32, 78);
-    color: #fff;
   }
 }

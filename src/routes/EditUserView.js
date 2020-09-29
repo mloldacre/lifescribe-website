@@ -113,24 +113,3 @@ export default class Profile extends Component {
     );
   }
 }
-
-// {/* <div className='user_name'>
-//             <label htmlFor='ProfileFormUsername'>
-//               Username
-//           </label>
-//             <input
-//               name='user_name'
-//               type='text'
-//               id='ProfileFormUsername'>
-//             </input>
-//           </div>
-//           <div className='password'>
-//             <label htmlFor='ProfileFormPassword'>
-//               Password
-//             </label>
-//             <input
-//               name='password'
-//               type='password'
-//               id='ProfileFormPassword'>
-//             </input>
-//           </div> */}

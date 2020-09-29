@@ -49,6 +49,3 @@ export default class CurrentScribeReview extends Component {
 }
 
 
-
-//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
-

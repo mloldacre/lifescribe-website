@@ -55,8 +55,8 @@ export default class CurrentScribeEntry extends Component {
   }
 
   render() {
-    const { scribble } = this.context
-    const { scribe } = this.context
+    const { scribble } = this.context;
+    const { scribe } = this.context;
     return (
       <Section className="ScribeEntryView">
         <h2>Your Thoughts</h2>
@@ -65,20 +65,18 @@ export default class CurrentScribeEntry extends Component {
           className="ScribbleEntryForm"
           onSubmit={this.onHandleSubmit}
         >
-          <fieldset>
-            <legend>Scribbles</legend>
-            <article className="TextScribble">
-              <textarea
-                id="text"
-                name="text"
-                placeholder={scribble && scribble.scribble_content ? scribble.scribble_content : 'Enter a text scribble!'}
-                defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
-              </textarea>
-            </article>
-            <button type="submit">
-              Submit
+          <article className="TextScribble">
+            <textarea
+              id="text"
+              name="text"
+              placeholder={scribble && scribble.scribble_content ? scribble.scribble_content : 'Enter a text scribble!'}
+              defaultValue={scribble && scribble.scribble_content ? scribble.scribble_content : ''}>
+            </textarea>
+          </article>
+          <button type="submit">
+            Submit
           </button>
-          </fieldset>
+
         </form>
         <BackButton />
       </Section>
