@@ -1,0 +1,30 @@
+//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
+
+//TODO Decide what to render and where to navigate after submission (CurrentScribeEntry)
+// render() {
+//   const { error } = this.context
+//   return (
+//     <h1 className="CurrentScribeEntry">
+//       <button type="submit">
+//         Previous Scribes
+//     </button>
+//       Current Scribe Entry Page
+//       {error
+//         ? <p className="error">There was an error on the Scribe Entry Page</p>
+//         : this.renderEntryView()}
+//       <button type="submit">
+//         Review Scribe
+//     </button>
+//     </h1>
+//   );
+// }
+// {/* <article className="MediaScribbles">
+//             <textarea
+//               id="media"
+//               name="media"
+//               placeholder="Upload a video, pic, or audio scribble!">
+//             </textarea>
+//           </article>
+//           <button type="submit">
+//             Upload
+//             </button> */}
