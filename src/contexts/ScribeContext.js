@@ -44,7 +44,6 @@ export class ScribeProvider extends Component {
   }
   
   setScribes = scribes => {
-
     this.setState({ scribes })
   }
 
