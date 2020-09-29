@@ -36,7 +36,7 @@ export default class CurrentScribeReview extends Component {
 	};
 
 	render() {
-		const { date, scribeId, scribbles } = this.props;
+		const { date, scribbles } = this.props;
 		return (
 			<div className='CurrentScribeReview'>
 				<h3>{moment(date).format('MM/DD/YYYY')}</h3>
