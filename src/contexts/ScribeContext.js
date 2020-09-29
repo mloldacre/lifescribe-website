@@ -1,5 +1,6 @@
 /* eslint-disable react/state-in-constructor */
 /* eslint-disable react/destructuring-assignment */
+// Context to handle Scribes and Scribbles
 import React, { Component } from 'react';
 
 export const nullScribe = {

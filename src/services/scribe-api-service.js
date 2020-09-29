@@ -55,7 +55,7 @@ const ScribeApiService = {
 		}).then((res) => (!res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()));
 	},
 
-	// TODO Modify to get media scribbles too!
+	// TODO Modify to get media scribbles too! (Stretch Goal)
 	postScribble(userId, scribeId, text) {
 		return fetch(`${config.API_ENDPOINT}/scribbles`, {
 			method: 'POST',

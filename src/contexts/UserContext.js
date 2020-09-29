@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
+// Context used to handle user data
 import React, { Component } from 'react';
 
 const UserContext = React.createContext({

@@ -8,6 +8,8 @@ import Calendar from '../components/Calendar/Calendar';
 import BackButton from '../components/BackButton/BackButton';
 import '../Style.css';
 
+// Displays list of previous scribes in order by date, uses Calendar component
+// to render links
 export default class ScribeCalendarView extends Component {
 	static contextType = ScribeContext;
 

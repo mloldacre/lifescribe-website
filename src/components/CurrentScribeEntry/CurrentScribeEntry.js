@@ -13,6 +13,8 @@ export default class CurrentScribeEntry extends Component {
 
 	static contextType = ScribeContext;
 
+// Reusing same component to review a Scribe by checking if it was passed params,
+// if not, the Scribe for the current day is called
 	componentDidMount() {
 		const { match } = this.props;
 		const { params } = match;

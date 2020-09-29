@@ -7,6 +7,8 @@ import { Section } from '../components/Utils/Utils';
 import CurrentScribeReview from '../components/CurrentScribeReview/CurrentScribeReview';
 import BackButton from '../components/BackButton/BackButton';
 
+// Displays list of Scribbles attached to a Scribe,
+// uses CurrentScribeReview component to render scribbles 
 export default class ScribeReviewView extends Component {
 	static defaultProps = {
 		match: { params: {} },

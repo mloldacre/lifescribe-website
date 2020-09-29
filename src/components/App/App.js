@@ -34,9 +34,17 @@ export default class App extends React.Component {
 					<PrivateRoute path='/loggedIn' component={ActiveUserView} />
 					<PrivateRoute path='/profile' component={Profile} />
 					<PrivateRoute path='/scribesCalendar/' component={ScribeCalendarView} />
+					
+					{/* \/ Used to previous Scribes \/ */}
 					<PrivateRoute path='/scribeReview/:scribeId' component={ScribeReviewView} />
-					<PrivateRoute exact path='/scribeReview/' component={ScribeReviewView} />
+					
+					{/* \/ Used to review Scribe for current day \/ */}
+					<PrivateRoute exact path='/scribeReview/' component={ScribeReviewView} /> 
+					
+					{/* \/ Used to enter a Scribble for current day \/ */}
 					<PrivateRoute exact path='/scribbleEntry/' component={CurrentScribeEntry} />
+					
+					{/* \/ Used to edit a Scribble for a previous Scribe \/ */}
 					<PrivateRoute path='/scribbleEntry/:scribbleId' component={CurrentScribeEntry} />
 					<PrivateRoute path='/editProfile' component={EditUserView} />
 					<Route component={NotFound} />

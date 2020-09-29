@@ -10,6 +10,7 @@ import AuthApiService from '../services/auth-api-service';
 import UserContext from '../contexts/UserContext';
 import BackButton from '../components/BackButton/BackButton';
 
+// Rendered for Profile component when user clicks "Edit" button
 export default class Profile extends Component {
 	static defaultProps = {
 		location: {},
@@ -56,6 +57,7 @@ export default class Profile extends Component {
 		this.props.history.push('/profile');
 	};
 
+// TODO Add ability to update username and password
 	render() {
 		const { error } = this.context;
 		const { user } = this.context;
