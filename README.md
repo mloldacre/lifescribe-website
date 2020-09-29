@@ -12,6 +12,16 @@
 </code></pre>
 <h2 id="running-the-tests">Running The Tests</h2>
 <p>To run front-end or back-end tests, simply run <code>npm t</code> in the terminal.</p>
+
+<h2 id="screenshots">Screenshots</h2>
+![Big Screen:](./src/images/LandingF.png)
+![Big Screen:]()
+![Big Screen:]()
+![Big Screen:]()
+![Small Screen:]()
+![Small Screen:]()
+![Small Screen:]()
+![Small Screen:]()
 <h2 id="built-withh2">Built With</h2>
 <p>
 React<br>
