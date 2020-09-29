@@ -16,9 +16,14 @@
 <h2 id="screenshots">Screenshots</h2>
 <img alt="Big Screen Landing Page" src="src/images/LandingF.png">
 <img alt="Big Screen Main Page" src="src/images/MainF.png">
-<img alt="Big Screen Calendar Page" src="src/images/PreviousF.png">
+<img alt="Big Screen Calendar Page" src="src/images/CalendarF.png">
 <img alt="Big Screen Scribbles Page" src="src/images/ScribblesF.png">
 <img alt="Big Screen Scribble Entry Page" src="src/images/ScribEntryF.png">
+<img alt="Small Screen Landing Page" src="src/images/LandingS.png">
+<img alt="Small Screen Main Page" src="src/images/MainS.png">
+<img alt="Small Screen Calendar Page" src="src/images/CalendarS.png">
+<img alt="Small Screen Scribbles Page" src="src/images/ScribblesS.png">
+<img alt="Small Screen Scribble Entry Page" src="src/images/ScribEntryS.png">
 
 <h2 id="built-withh2">Built With</h2>
 <p>
