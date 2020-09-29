@@ -57,8 +57,8 @@ export default class ScribeReviewView extends Component {
     if (!scribe) {
       return null
     }
-    console.log("SRV: Scribe:", scribe)
     return <CurrentScribeReview
+      className="CurrentScribeReview"
       date={scribe.date_created}
       scribeId={scribe.id}
       scribbles={scribbles}
