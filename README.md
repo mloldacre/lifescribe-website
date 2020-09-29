@@ -14,7 +14,7 @@
 <p>To run front-end or back-end tests, simply run <code>npm t</code> in the terminal.</p>
 
 <h2 id="screenshots">Screenshots</h2>
-![Big Screen:](/src/images/LandingF.png)
+<img alt="Big Screen Landing Page" src=".src/images/LandingF.png">
 ![Big Screen:]()
 ![Big Screen:]()
 ![Big Screen:]()
