@@ -3,6 +3,8 @@ a')}
 
 TODO Add file upload
 
+//TODO Basically make a personal twitter clone that is visually appealing 
+
 //TODO Decide what to render and where to navigate after submission (CurrentScribeEntry)
 // render() {
 //   const { error } = this.context
