@@ -1,4 +1,7 @@
-//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm a')}
+//{moment(scribe.date_created).tz('America/New_York').format('MM/DD/YYYY hh:mm
+a')}
+
+//TODO Basically make a personal twitter clone that is visually appealing 
 
 //TODO Decide what to render and where to navigate after submission (CurrentScribeEntry)
 // render() {
